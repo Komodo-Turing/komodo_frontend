@@ -1,6 +1,7 @@
 class UsersController < ApplicationController
 
   def create
+
     auth_hash = request.env['omniauth.auth']
 
     name = auth_hash["info"]["name"]
