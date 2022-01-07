@@ -7,4 +7,6 @@ Rails.application.routes.draw do
   get '/dashboard', to: "users#show"
 
   get 'users/edit', to: "users#edit"
+
+  get '/timers', to: "timers#show"
 end
