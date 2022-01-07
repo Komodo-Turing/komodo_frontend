@@ -6,6 +6,5 @@ Rails.application.routes.draw do
   get '/auth/google_oauth2/callback', to: "users#create"
   get '/dashboard', to: "users#show"
 
-  get '/user/edit', to: "users#edit"
-
+  get 'users/edit', to: "users#edit"
 end
