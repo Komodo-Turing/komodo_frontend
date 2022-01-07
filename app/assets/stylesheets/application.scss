@@ -16,19 +16,19 @@
 
  @import "bootstrap";
 
-  // body {
-  //    display: flex;
-  //    // min-height: 100vh;
-  //    // flex-direction: column;
-  //    color: black;
-  //    background-image: url(https://i.ibb.co/c6mtRr2/wp3589868-light-grey-wallpapers.jpg);
-  //    background-repeat: repeat;
-  //    background-attachment: fixed;
-  //    background-position: center;
-  //    -webkit-background-size: cover;
-  //    -moz-background-size: cover;
-  //    background-size: cover;
-  //    -o-background-size: cover;
-  //    height: 100%;
-  //    margin: 50px;
-  //  }
+  body {
+     display: flex;
+     min-height: 100vh;
+     flex-direction: column;
+     color: black;
+     background-image: url(https://i.ibb.co/c6mtRr2/wp3589868-light-grey-wallpapers.jpg);
+     background-repeat: repeat;
+     background-attachment: fixed;
+     background-position: center;
+     -webkit-background-size: cover;
+     -moz-background-size: cover;
+     background-size: cover;
+     -o-background-size: cover;
+     height: 100%;
+     margin: 50px;
+   }
