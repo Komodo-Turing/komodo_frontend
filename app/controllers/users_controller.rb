@@ -17,9 +17,10 @@ class UsersController < ApplicationController
       redirect_to '/dashboard'
 
     else #if user is new and doesn't have a phone number, take them to update page
-      redirect_to '/user/edit'
+      redirect_to '/users/edit'
     end
   end
+
 
   def new
   end
@@ -30,4 +31,3 @@ class UsersController < ApplicationController
 end
 
 # don't forget phone number and address
-
