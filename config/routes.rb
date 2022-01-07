@@ -10,4 +10,5 @@ Rails.application.routes.draw do
   patch '/users', to: "users#update"
   get '/logout', to: 'sessions#destroy' #there is no link for this yet
 
+
 end
