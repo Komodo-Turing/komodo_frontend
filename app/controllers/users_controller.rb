@@ -10,11 +10,22 @@ class UsersController < ApplicationController
     google_id = auth_hash["uid"]
 
     user = User.find_or_create_by(email: email)
-    user.update(name: name, email: email, token: token, google_id: google_id)
 
-    # session[:user_id] = user.id
+    if user.save  #if user.exists? #if user is returning and already has a phone number
+      user.update(name: name, email: email, token: token, google_id: google_id)
+      session[:user_id] = user.id
+      redirect_to '/dashboard'
 
-    redirect_to '/dashboard'
+    else #if user is new and doesn't have a phone number, take them to update page
+      redirect_to '/user/edit'
+    end
+  end
+
+  def new
+  end
+
+  def update
+
   end
 end
 
