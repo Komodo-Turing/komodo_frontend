@@ -3,9 +3,11 @@ Rails.application.routes.draw do
   root 'welcome#index'
 
 
-  get '/auth/google_oauth2/callback', to: "users#create"
-  get '/dashboard', to: "users#show"
+  get '/auth/google_oauth2/callback', to: "sessions#create"
+  get '/dashboard', to: "dashboard#index"
 
   get '/users/edit', to: "users#edit"
   patch '/users', to: "users#update"
+  get '/logout', to: 'sessions#destroy' #there is no link for this yet
+
 end

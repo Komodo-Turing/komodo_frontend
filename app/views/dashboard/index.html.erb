@@ -1,6 +1,6 @@
 <h1>Dashboard</h1>
 
-<% if @user.phone_number %>
+<% if @user.phone_number == nil %>
   <%= form_with url: "/users", method: :patch, local: true do |form| %>
     <%= form.label :name %>
     <%= form.text_field :name %>
