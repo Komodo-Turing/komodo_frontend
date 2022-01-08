@@ -6,5 +6,11 @@ class ContactsFacade
         Contact.new(contact_data)
       end
     end
+
+    def create_contact(params)
+      contact_data = ContactsService.create_contact(params)
+
+      Contact.new(contact_data[:data])
+    end
   end
 end
