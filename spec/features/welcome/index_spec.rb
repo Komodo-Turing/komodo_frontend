@@ -9,7 +9,6 @@ RSpec.describe "welcome page", type: :feature do
     end
 
     it "directs returning user to the dashboard" do
-      save_and_open_page
       expect(current_path).to eq("/dashboard")
     end
   end
