@@ -21,6 +21,21 @@ RSpec.describe ContactsFacade do
     expect(contacts.last.name).to eq("John Morris")
     expect(contacts.last.phone_number).to eq("303-249-3081")
     expect(contacts.last.user_id).to eq(2)
+  end
 
+  it "can edit a contact" do
+    user_id = 1
+    contact_id = 4
+    params = { phone_number: "111-111-1111" }
+
+
+    ContactsFacade.edit_contact(params, contact_id)
+
+    contacts = ContactsFacade.get_contacts(user_id)
+
+    expect(contacts.last).to be_a Contact
+    expect(contacts.last.name).to eq("John Morris")
+    expect(contacts.last.phone_number).to eq("303-249-3081")
+    expect(contacts.last.user_id).to eq(2)
   end
 end
