@@ -1,7 +1,11 @@
 class TimersController < ApplicationController
 
-  def show
+  def create
 
   end 
+
+  def show
+
+  end
 
 end

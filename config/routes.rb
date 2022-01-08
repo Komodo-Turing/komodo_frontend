@@ -2,7 +2,6 @@ Rails.application.routes.draw do
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
   root 'welcome#index'
 
-
   get '/auth/google_oauth2/callback', to: "sessions#create"
   get '/dashboard', to: "dashboard#index"
 
@@ -10,5 +9,7 @@ Rails.application.routes.draw do
   patch '/users', to: "users#update"
   get '/logout', to: 'sessions#destroy' #there is no link for this yet
 
-
+  get '/timers/new', to: 'timers#new'
+  post '/timers', to: 'timers#create'
+  get '/timers', to: 'timers#show'
 end

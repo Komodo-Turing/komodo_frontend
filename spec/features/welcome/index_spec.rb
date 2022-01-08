@@ -8,8 +8,7 @@ RSpec.describe "welcome page", type: :feature do
       click_on "Sign-In with Google"
     end
 
-    it "directs returning user to the dashboard" do
-      save_and_open_page
+    xit "directs returning user to the dashboard" do
       expect(current_path).to eq("/dashboard")
     end
   end
