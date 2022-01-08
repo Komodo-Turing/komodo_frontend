@@ -10,6 +10,7 @@
   <% end %>
 <% end %>
 
+
 <h2>List of Contacts</h2>
 
 <% @contacts.each do |contact| %>
@@ -18,3 +19,8 @@
     <%= contact.phone_number %>
   </section>
 <% end %>
+
+<div class="btn btn-primary">
+  <%= link_to 'Log Out', '/logout', :class => "btn"  %>
+</div>
+
