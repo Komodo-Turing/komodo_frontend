@@ -6,10 +6,21 @@
     <%= form.text_field :name %>
     <%= form.label :phone_number %>
     <%= form.text_field :phone_number %>
-    <%= form.submit 'Update User' %>
+    <%= form.submit "Update User" %>
   <% end %>
+<% end %>
+
+
+<h2>List of Contacts</h2>
+
+<% @contacts.each do |contact| %>
+  <section class="contact">
+    <%= contact.name %>:
+    <%= contact.phone_number %>
+  </section>
 <% end %>
 
 <div class="btn btn-primary">
   <%= link_to 'Log Out', '/logout', :class => "btn"  %>
 </div>
+
