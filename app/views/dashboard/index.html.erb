@@ -9,12 +9,23 @@
 <% end %>
 
 
-<h2>List of Contacts</h2>
-
+<h2>Contacts:</h2>
 <% @contacts.each do |contact| %>
   <section class="contact">
-    <%= contact.name %>:
-    <%= contact.phone_number %>
+    <p>Contact Name: <%= contact.name %></p>
+    <p>Contact Phone Number: <%= contact.phone_number %></p>
+  </section>
+<% end %>
+
+<h2>Timers:</h2>
+<% @timers.each do |timer| %>
+  <section class="timer">
+    <h1><%= timer.name %></h1>
+    <p>Duration: <%= timer.duration %></p>
+    <p>Substance: <%= timer.substance %></p>
+    <p>Dosage: <%= timer.dosage %></p>
+    <p>Entry Instructions: <%= timer.entry_instructions %></p>
+    <p>Notes: <%= timer.notes %></p>
   </section>
 <% end %>
 

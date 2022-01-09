@@ -30,7 +30,7 @@
     if (today > birthday) {
       birthday = dayMonth + nextYear;
     }
-    
+
 
     const countDown = new Date(birthday).getTime(),
         x = setInterval(function() {
@@ -54,3 +54,7 @@
         }, 0)
     }());
 </script>
+
+<button type="button" class="btn btn-primary">Start Timer</button>
+<br><br>
+<button type="button" class="btn btn-danger">STOP Timer</button>
