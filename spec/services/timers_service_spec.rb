@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.describe 'get timers api' do
+RSpec.describe TimersService do
 
   it 'can create a timer' do
     @haewon = User.create!(name: "Haewon Jeon", email: "haewonito@gmail.com", token: "something", google_id: "somethingelse", phone_number: "303-249-3081")

@@ -287,6 +287,53 @@
           null
         ]
       },
+      "/Users/stephaniemhelm/consultancy/komodo_frontend/spec/facades/timers_facade_spec.rb": {
+        "lines": [
+          1,
+          null,
+          1,
+          1,
+          1,
+          null,
+          1,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          1,
+          1,
+          1,
+          null,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          null,
+          null,
+          null
+        ]
+      },
+      "/Users/stephaniemhelm/consultancy/komodo_frontend/app/facades/timers_facade.rb": {
+        "lines": [
+          1,
+          1,
+          1,
+          2,
+          2,
+          2,
+          null,
+          null,
+          null,
+          null,
+          null
+        ]
+      },
       "/Users/stephaniemhelm/consultancy/komodo_frontend/spec/features/application_spec.rb": {
         "lines": [
           1,
@@ -404,6 +451,59 @@
           null
         ]
       },
+      "/Users/stephaniemhelm/consultancy/komodo_frontend/spec/poros/timer_spec.rb": {
+        "lines": [
+          1,
+          null,
+          1,
+          1,
+          1,
+          null,
+          1,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          1,
+          1,
+          1,
+          null,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          null,
+          null
+        ]
+      },
+      "/Users/stephaniemhelm/consultancy/komodo_frontend/app/poros/timer.rb": {
+        "lines": [
+          1,
+          null,
+          1,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          1,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          null,
+          null
+        ]
+      },
       "/Users/stephaniemhelm/consultancy/komodo_frontend/spec/services/timers_service_spec.rb": {
         "lines": [
           1,
@@ -424,7 +524,6 @@
           null,
           1,
           null,
-          null,
           1,
           1,
           1,
@@ -464,6 +563,35 @@
           null,
           1,
           1,
+          null,
+          null
+        ]
+      },
+      "/Users/stephaniemhelm/consultancy/komodo_frontend/app/services/timers_service.rb": {
+        "lines": [
+          1,
+          1,
+          1,
+          3,
+          3,
+          null,
+          null,
+          null,
+          1,
+          4,
+          4,
+          null,
+          4,
+          null,
+          null,
+          null,
+          1,
+          1,
+          7,
+          null,
+          null,
+          1,
+          7,
           null,
           null,
           null
@@ -489,41 +617,8 @@
           null,
           null
         ]
-      },
-      "/Users/stephaniemhelm/consultancy/komodo_frontend/app/services/timers_service.rb": {
-        "lines": [
-          1,
-          1,
-          1,
-          1,
-          1,
-          null,
-          null,
-          null,
-          1,
-          null,
-          2,
-          2,
-          null,
-          null,
-          2,
-          null,
-          null,
-          null,
-          null,
-          1,
-          1,
-          3,
-          null,
-          null,
-          1,
-          3,
-          null,
-          null,
-          null
-        ]
       }
     },
-    "timestamp": 1641751725
+    "timestamp": 1641754095
   }
 }
