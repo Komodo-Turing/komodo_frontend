@@ -271,6 +271,13 @@
           null
         ]
       },
+      "/Users/haewonjeon/right_now_Turing/consultancy_project/komodo_frontend/spec/support/factory_bot.rb": {
+        "lines": [
+          1,
+          1,
+          null
+        ]
+      },
       "/Users/haewonjeon/right_now_Turing/consultancy_project/komodo_frontend/app/facades/contacts_facade.rb": {
         "lines": [
           1,
@@ -278,13 +285,17 @@
           1,
           2,
           2,
-          23,
+          29,
           null,
           null,
           null,
           1,
-          1,
+          2,
           null,
+          2,
+          null,
+          null,
+          1,
           1,
           null,
           null,
@@ -293,18 +304,18 @@
       },
       "/Users/haewonjeon/right_now_Turing/consultancy_project/komodo_frontend/spec/features/welcome/index_spec.rb": {
         "lines": [
-          1,
-          null,
-          1,
-          1,
-          1,
-          1,
-          1,
-          1,
           null,
           null,
-          1,
-          0,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
+          null,
           null,
           null,
           null
@@ -342,11 +353,11 @@
           null,
           1,
           1,
-          1,
+          0,
           null,
-          1,
-          1,
-          1,
+          0,
+          0,
+          0,
           null,
           null
         ]
@@ -357,9 +368,10 @@
           1,
           null,
           1,
-          25,
-          25,
-          25,
+          31,
+          31,
+          31,
+          31,
           null,
           null
         ]
@@ -374,41 +386,33 @@
           null,
           null,
           1,
+          2,
+          2,
+          null,
+          2,
+          null,
+          null,
+          1,
           1,
           1,
           null,
           1,
+          0,
           null,
           null,
           1,
           1,
-          3,
+          5,
           null,
           null,
           1,
-          3,
+          4,
           null,
           null,
-          null
-        ]
-      },
-      "/Users/haewonjeon/right_now_Turing/consultancy_project/komodo_frontend/app/controllers/welcome_controller.rb": {
-        "lines": [
-          1,
-          1,
-          null,
-          null,
-          null,
-          null
-        ]
-      },
-      "/Users/haewonjeon/right_now_Turing/consultancy_project/komodo_frontend/app/controllers/application_controller.rb": {
-        "lines": [
-          1,
           null
         ]
       }
     },
-    "timestamp": 1641665973
+    "timestamp": 1641697549
   }
 }
