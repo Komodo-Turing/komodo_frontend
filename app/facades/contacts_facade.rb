@@ -16,5 +16,9 @@ class ContactsFacade
     def edit_contact(params, contact_id)
       ContactsService.edit_contact(params, contact_id)
     end
+
+    def delete_contact(contact_id)
+      ContactsService.delete_contact(contact_id)
+    end
   end
 end

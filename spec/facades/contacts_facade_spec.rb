@@ -36,8 +36,8 @@ RSpec.describe ContactsFacade do
     contacts = ContactsFacade.get_contacts(user_id)
 
     expect(contacts.last).to be_a Contact
-    expect(contacts.last.name).to eq("John Morris")
-    expect(contacts.last.phone_number).to eq("303-249-3081")
-    expect(contacts.last.user_id).to eq(2)
+    expect(contacts.last.name).to eq("Stephanie")
+    expect(contacts.last.phone_number).to eq("111-111-1111")
+    expect(contacts.last.user_id).to eq(user_id)
   end
 end

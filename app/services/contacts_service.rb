@@ -19,6 +19,12 @@ class ContactsService
       parse_data(response)
     end
 
+    def delete_contact(contact_id)
+      response = conn.delete("/api/v1/contacts/#{contact_id}")
+
+      parse_data(response)
+    end
+
     private
     def conn
       Faraday.new("http://localhost:3000")
