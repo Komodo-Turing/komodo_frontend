@@ -2,8 +2,6 @@
 
 <% if @user.phone_number == nil %>
   <%= form_with url: "/users", method: :patch, local: true do |form| %>
-    <%= form.label :name %>
-    <%= form.text_field :name %>
     <%= form.label :phone_number %>
     <%= form.text_field :phone_number %>
     <%= form.submit "Update User" %>
@@ -24,6 +22,7 @@
   <%= link_to 'Create Timer', '/timers/new', :class => "btn"  %>
 </div>
 
+<br>
 
 <div class="btn btn-primary">
   <%= link_to 'Log Out', '/logout', :class => "btn"  %>

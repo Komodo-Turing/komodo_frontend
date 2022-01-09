@@ -1,11 +1,8 @@
 class TimersController < ApplicationController
 
-  def create
-
-  end 
-
-  def show
-
+  def index
+    #user's dashboard
+    #require "pry"; binding.pry
   end
 
 end
