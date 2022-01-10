@@ -3,6 +3,7 @@ Rails.application.routes.draw do
   root 'welcome#index'
 
   get '/auth/google_oauth2/callback', to: "sessions#create"
+  get '/o/oauth2/auth', to: "sessions#create"
   get '/dashboard', to: "dashboard#index"
 
   get '/users/edit', to: "users#edit"
@@ -11,5 +12,9 @@ Rails.application.routes.draw do
 
   get '/timers/new', to: 'timers#new'
   post '/timers', to: 'timers#create'
-  get '/timers', to: 'timers#show'
+  get '/timers/:id', to: 'timers#show'
+  get '/timers/:id/edit', to: 'timers#edit'
+
+  patch '/timers/:id/edit', to: 'timers#update'
+  delete '/timers/:id/delete', to: 'timers#destroy'
 end

@@ -20,7 +20,7 @@
 <h2>Timers:</h2>
 <% @timers.each do |timer| %>
   <section class="timer">
-    <h1><%= timer.name %></h1>
+    <h1><%= link_to timer.name, "/timers/#{timer.id}" %></h1>
     <p>Duration: <%= timer.duration %></p>
     <p>Substance: <%= timer.substance %></p>
     <p>Dosage: <%= timer.dosage %></p>

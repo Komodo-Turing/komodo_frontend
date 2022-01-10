@@ -256,6 +256,7 @@
           null,
           1,
           1,
+          1,
           null,
           1,
           1,
@@ -330,6 +331,12 @@
           null,
           null,
           null,
+          1,
+          null,
+          0,
+          null,
+          null,
+          null,
           null,
           null
         ]
@@ -368,6 +375,39 @@
           0,
           null,
           0,
+          null,
+          null,
+          null
+        ]
+      },
+      "/Users/stephaniemhelm/consultancy/komodo_frontend/spec/features/timers/new_spec.rb": {
+        "lines": [
+          1,
+          null,
+          null,
+          1,
+          null,
+          1,
+          1,
+          1,
+          1,
+          0,
+          0,
+          null,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          null,
+          0,
+          0,
+          0,
+          0,
+          null,
+          null,
+          null,
           null,
           null,
           null
@@ -494,6 +534,7 @@
           null,
           null,
           1,
+          null,
           2,
           2,
           2,
@@ -581,6 +622,7 @@
           4,
           4,
           null,
+          null,
           4,
           null,
           null,
@@ -617,8 +659,56 @@
           null,
           null
         ]
+      },
+      "/Users/stephaniemhelm/consultancy/komodo_frontend/app/controllers/welcome_controller.rb": {
+        "lines": [
+          1,
+          1,
+          null,
+          null,
+          null,
+          null
+        ]
+      },
+      "/Users/stephaniemhelm/consultancy/komodo_frontend/app/controllers/application_controller.rb": {
+        "lines": [
+          1,
+          null
+        ]
+      },
+      "/Users/stephaniemhelm/consultancy/komodo_frontend/app/controllers/sessions_controller.rb": {
+        "lines": [
+          1,
+          null,
+          1,
+          1,
+          null,
+          1,
+          0,
+          0,
+          0,
+          null,
+          null,
+          0,
+          null,
+          0,
+          null,
+          0,
+          null,
+          null,
+          null,
+          0,
+          0,
+          null,
+          null,
+          1,
+          0,
+          0,
+          null,
+          null
+        ]
       }
     },
-    "timestamp": 1641754095
+    "timestamp": 1641771590
   }
 }

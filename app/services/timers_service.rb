@@ -10,6 +10,7 @@ class TimersService
       response = conn.post("/api/v1/timers") do |f|
         f.params = params
       end
+      #require "pry"; binding.pry
       parse_data(response)
     end
 

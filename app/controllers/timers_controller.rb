@@ -8,7 +8,25 @@ class TimersController < ApplicationController
   end
 
   def new
+  end
 
+  def create
+
+    @timer = TimersFacade.create_timers(timer_params)
+
+    #redirect_to '/dashboard'
+  end
+
+  def show
+    @timer = Timer.find(params[:id])
 
   end 
+
+  private
+
+  def timer_params
+    params.permit(:user_id, :name, :duration, :substance, :dosage, :entry_instructions, :notes)
+  end
+
 end
+#@timer = TimersFacade.create_timers(data: {attributes: {user_id: session[:user_id], name: params[:name], duration: params[:duration], substance: params[:substance], dosage: params[:dosage], entry_instructions: params[:entry_instructions], notes: params[:params]}})

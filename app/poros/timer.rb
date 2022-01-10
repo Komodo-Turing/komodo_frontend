@@ -8,6 +8,7 @@ class Timer
               :notes
 
   def initialize(data)
+    #require "pry"; binding.pry
     @name = data[:attributes][:name]
     @duration = data[:attributes][:duration]
     @substance = data[:attributes][:substance]
