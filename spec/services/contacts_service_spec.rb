@@ -22,16 +22,16 @@ RSpec.describe ContactsService do
     expect(response[:data][:attributes][:phone_number]).to eq("303-249-3081")
   end
 
-  # it '#edit_contact', :vcr do
-  #   user = User.create!(name: "Bill Burke", email: "bill@gmail.com", token: "48575656453", google_id: "302-493-2954")
-  #   user_id = user.id
-  #
-  #   params = { name: "Stephanie", phone_number: "970-249-6781", user_id: user_id }
-  #   contact = ContactsFacade.create_contact(params)
-  #   # contact_id = contact.id
-  #   params = { phone_number: "111-111-1111" }
-  #   ContactsFacade.edit_contact(params, contact.contact_id)
-  # end
+  it '#edit_contact', :vcr do
+    user = User.create!(name: "Bill Burke", email: "bill@gmail.com", token: "48575656453", google_id: "302-493-2954")
+    user_id = user.id
+
+    params = { name: "Stephanie", phone_number: "970-249-6781", user_id: user_id }
+    contact = ContactsFacade.create_contact(params)
+    # contact_id = contact.id
+    params = { phone_number: "111-111-1111" }
+    ContactsFacade.edit_contact(params, contact.contact_id)
+  end
 
   # it "#delete_contact", :vcr do
   #   user = User.create!(name: "Bill Burke", email: "bill@gmail.com", token: "48575656453", google_id: "302-493-2954")
