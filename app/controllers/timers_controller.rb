@@ -20,6 +20,10 @@ class TimersController < ApplicationController
   def show
     @timer = Timer.find(params[:id])
 
+  end
+
+  def destroy
+
   end 
 
   private
