@@ -33,5 +33,5 @@
 # Ignore application configuration
 /config/application.yml
 
-# ignore test coverage
+# Ignore coverage file
 /coverage
