@@ -14,6 +14,11 @@
       parse_data(response)
     end
 
+    # def get_timer(user_id, timer_id)
+    #
+    #
+    # end 
+
 
     private
     def conn

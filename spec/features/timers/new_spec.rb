@@ -21,7 +21,7 @@ RSpec.describe 'new timer' do
 
     click_button "Create Timer"
     data = TimersFacade.get_timers(@haewon.id)
-    require "pry"; binding.pry
+    #require "pry"; binding.pry
     expect(current_path).to eq('/dashboard')
 
   end

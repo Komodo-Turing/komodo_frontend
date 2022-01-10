@@ -3,7 +3,7 @@ require 'rails_helper'
 
 RSpec.describe 'new timer' do
 
-  xit 'can edit a timer' do
+  it 'can edit a timer' do
 
     @haewon = User.create!(name: "Haewon Jeon", email: "haewonito@gmail.com", token: "something", google_id: "somethingelse", phone_number: "303-249-3081")
     timer_params = {
