@@ -12,4 +12,7 @@ Rails.application.routes.draw do
   get '/timers/new', to: 'timers#new'
   post '/timers', to: 'timers#create'
   get '/timers', to: 'timers#show'
+
+  post '/active_timers', to: 'active_timers#create'
+  get '/active_timers/:id', to: 'active_timers#show'
 end
