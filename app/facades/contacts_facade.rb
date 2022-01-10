@@ -10,5 +10,19 @@ class ContactsFacade
         []
       end
     end
+
+    def create_contact(params)
+      contact_data = ContactsService.create_contact(params)
+
+      Contact.new(contact_data[:data])
+    end
+
+    def edit_contact(params, contact_id)
+      ContactsService.edit_contact(params, contact_id)
+    end
+
+    def delete_contact(contact_id)
+      ContactsService.delete_contact(contact_id)
+    end
   end
 end
