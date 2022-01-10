@@ -18,15 +18,17 @@
 <% end %>
 
 <h2>Timers:</h2>
-<% @timers.each do |timer| %>
-  <section class="timer">
-    <h1><%= link_to timer.name, "/timers/#{timer.id}" %></h1>
-    <p>Duration: <%= timer.duration %></p>
-    <p>Substance: <%= timer.substance %></p>
-    <p>Dosage: <%= timer.dosage %></p>
-    <p>Entry Instructions: <%= timer.entry_instructions %></p>
-    <p>Notes: <%= timer.notes %></p>
-  </section>
+<% if @timers != [] %>
+  <% @timers.each do |timer| %>
+    <section class="timer">
+      <h1><%= link_to timer.name, "/timers/#{timer.id}" %></h1>
+      <p>Duration: <%= timer.duration %></p>
+      <p>Substance: <%= timer.substance %></p>
+      <p>Dosage: <%= timer.dosage %></p>
+      <p>Entry Instructions: <%= timer.entry_instructions %></p>
+      <p>Notes: <%= timer.notes %></p>
+    </section>
+  <% end %>
 <% end %>
 
 <div class="btn btn-primary">
