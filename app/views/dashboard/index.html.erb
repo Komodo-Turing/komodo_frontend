@@ -2,8 +2,6 @@
 
 <% if @user.phone_number == nil %>
   <%= form_with url: "/users", method: :patch, local: true do |form| %>
-    <%= form.label :name %>
-    <%= form.text_field :name %>
     <%= form.label :phone_number %>
     <%= form.text_field :phone_number %>
     <%= form.submit "Update User" %>
@@ -11,12 +9,23 @@
 <% end %>
 
 
-<h2>List of Contacts</h2>
-
+<h2>Contacts:</h2>
 <% @contacts.each do |contact| %>
   <section class="contact">
-    <%= contact.name %>:
-    <%= contact.phone_number %>
+    <p>Contact Name: <%= contact.name %></p>
+    <p>Contact Phone Number: <%= contact.phone_number %></p>
+  </section>
+<% end %>
+
+<h2>Timers:</h2>
+<% @timers.each do |timer| %>
+  <section class="timer">
+    <h1><%= link_to timer.name, "/timers/#{timer.id}" %></h1>
+    <p>Duration: <%= timer.duration %></p>
+    <p>Substance: <%= timer.substance %></p>
+    <p>Dosage: <%= timer.dosage %></p>
+    <p>Entry Instructions: <%= timer.entry_instructions %></p>
+    <p>Notes: <%= timer.notes %></p>
   </section>
 <% end %>
 
@@ -24,6 +33,7 @@
   <%= link_to 'Create Timer', '/timers/new', :class => "btn"  %>
 </div>
 
+<br>
 
 <div class="btn btn-primary">
   <%= link_to 'Log Out', '/logout', :class => "btn"  %>
