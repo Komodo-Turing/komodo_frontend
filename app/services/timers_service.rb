@@ -1,4 +1,4 @@
-class TimersService
+  class TimersService
   class << self
     def get_timers(user_id)
       response = conn.get("/api/v1/timers/?user_id=#{user_id}")

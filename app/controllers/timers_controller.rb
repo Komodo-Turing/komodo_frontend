@@ -11,10 +11,18 @@ class TimersController < ApplicationController
   end
 
   def create
-
     @timer = TimersFacade.create_timers(timer_params)
-
     #redirect_to '/dashboard'
+  end
+
+  def edit
+    @timer = Timer.find(params[:id])
+  end
+
+  def update
+    timer = Timer.find(params[:id])
+    timer.update(timer_params)
+
   end
 
   def show
@@ -23,8 +31,9 @@ class TimersController < ApplicationController
   end
 
   def destroy
-
-  end 
+    timer = Timer.find(params[:id])
+    timer.destroy
+  end
 
   private
 

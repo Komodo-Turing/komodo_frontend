@@ -5,9 +5,11 @@ RSpec.describe 'new timer' do
 
   it 'can create a new timer' do
     @haewon = User.create!(name: "Haewon Jeon", email: "haewonito@gmail.com", token: "something", google_id: "somethingelse", phone_number: "303-249-3081")
-    visit '/'
-    click_link 'Sign-In with Google'
-    save_and_open_page
+    # visit '/'
+    # click_link 'Sign-In with Google'
+    # save_and_open_page
+    # session[:user_id] = @haewon.id
+
     visit '/timers/new'
 
     fill_in :name, with: 'Timer'

@@ -10,7 +10,8 @@ class TimersFacade
     def create_timers(params)
       timer_data = TimersService.create_timers(params)
       #require "pry"; binding.pry
-      Timer.new(timer_data)
+      timer1 = Timer.new(timer_data)
+      require "pry"; binding.pry
     end
   end
 end

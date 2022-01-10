@@ -1,0 +1,23 @@
+<h1>Update Timer:</h1>
+<br><br>
+<%= form_with url: "/timers/#{@timer.id}", method: :patch, local: true do |form| %>
+  <%= form.label :name %>
+  <%= form.text_field :name %>
+  <br><br>
+  <%= form.label :duration %>
+  <%= form.number_field :duration %>
+  <br><br>
+  <%= form.label :substance %>
+  <%= form.text_field :substance %>
+  <br><br>
+  <%= form.label :dosage %>
+  <%= form.text_field :dosage %>
+  <br><br>
+  <%= form.label :entry_instructions %>
+  <%= form.text_field :entry_instructions %>
+  <br><br>
+  <%= form.label :notes %>
+  <%= form.text_field :notes %>
+  <br><br>
+  <%= form.submit "Update Timer" %>
+<% end %>

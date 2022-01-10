@@ -16,8 +16,9 @@ Rails.application.routes.draw do
 
   get '/timers/:id', to: 'timers#show'
   get '/timers/:id/edit', to: 'timers#edit'
+  #patch '/timers/:id/edit', to: 'timers#update'
+  patch '/timers/:id', to: 'timers#update'
 
-  patch '/timers/:id/edit', to: 'timers#update'
   delete '/timers/:id/delete', to: 'timers#destroy'
 
   post '/active_timers', to: 'active_timers#create'
