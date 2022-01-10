@@ -53,7 +53,6 @@ RSpec.describe ContactsFacade do
     contacts = ContactsFacade.get_contacts(user_id)
 
     expect(contacts).to be_empty
-    # expect(contacts.last.phone_number).to eq("970-249-6781")
   end
 
 end
