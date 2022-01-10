@@ -8,6 +8,9 @@ RSpec.describe 'new timer' do
   end
   it 'can create a new timer' do
     @haewon = User.create!(name: "Haewon Jeon", email: "haewonito@gmail.com", token: "something", google_id: "somethingelse", phone_number: "303-249-3081")
+
+    visit '/timers/new'
+
     visit '/'
     click_link 'Sign-In with Google'
     click_link 'Create Timer'
@@ -20,6 +23,7 @@ RSpec.describe 'new timer' do
     fill_in :notes, with: 'These are some notes'
 
     click_button "Create Timer"
+    data = TimersFacade.get_timers(@haewon.id)
 
     expect(current_path).to eq('/dashboard')
   end

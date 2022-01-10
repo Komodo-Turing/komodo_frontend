@@ -1,4 +1,4 @@
-class TimersService
+  class TimersService
   class << self
     def get_timers(user_id)
       response = conn.get("/api/v1/timers/?user_id=#{user_id}")
@@ -13,6 +13,11 @@ class TimersService
       #require "pry"; binding.pry
       parse_data(response)
     end
+
+    # def get_timer(user_id, timer_id)
+    #
+    #
+    # end 
 
 
     private
