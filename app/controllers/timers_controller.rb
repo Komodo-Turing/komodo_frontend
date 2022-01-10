@@ -11,7 +11,6 @@ class TimersController < ApplicationController
   end
 
   def create
-
     @timer = TimersFacade.create_timers(timer_params)
 
     #redirect_to '/dashboard'
