@@ -17,6 +17,10 @@
   </section>
 <% end %>
 
+<div class="btn btn-primary">
+  <%= link_to 'Create Contact', '/contacts/new', :class => "btn"  %>
+</div>
+
 <h2>Timers:</h2>
 <% if @timers != [] %>
   <% @timers.each do |timer| %>
