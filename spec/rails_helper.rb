@@ -24,7 +24,7 @@ require 'webmock/rspec'
 # directory. Alternatively, in the individual `*_spec.rb` files, manually
 # require only the support files necessary.
 #
-# Dir[Rails.root.join('spec', 'support', '**', '*.rb')].sort.each { |f| require f }
+Dir[Rails.root.join('spec', 'support', '**', '*.rb')].sort.each { |f| require f }
 
 # Checks for pending migrations and applies them before tests are run.
 # If you are not using ActiveRecord, you can remove these lines.
@@ -95,3 +95,18 @@ def contacts_data_for_test
     ]
   }
 end
+
+OmniAuth.config.test_mode = true
+OmniAuth.config.mock_auth[:google_oauth2] = OmniAuth::AuthHash.new({
+    :provider => "google_oauth2",
+    :uid => "123456789",
+    :info => {
+      :name => "Tony Stark",
+      :email => "tony@stark.com"
+    },
+    :credentials => {
+      :token => "token",
+      :refresh_token => "refresh token"
+    }
+  }
+)
