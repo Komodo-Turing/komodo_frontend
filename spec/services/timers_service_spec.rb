@@ -56,4 +56,36 @@ RSpec.describe TimersService do
     expect(results).to be_a Hash
     expect(first_timer).to be_a Array
   end
+
+  it 'can get a timer' do
+    timer_id = 187
+
+    result = TimersService.get_timer(timer_id)
+
+    expect(result).to be_a Hash
+    expect(result).to have_key :data
+    expect(result[:data]).to be_a Hash
+    expect(result[:data]).to have_key :attributes
+    expect(result[:data][:attributes]).to be_a Hash
+  end
+
+  it 'can update a timer' do
+    timer_id = 187
+    params = {
+        name: 'Timer',
+        duration: 120,
+        substance: 'Drug',
+        dosage: '10oz',
+        entry_instructions: 'The building code is 1234',
+        notes: 'These are some notes'
+      }
+
+    result = TimersService.update_timers(timer_id, params)
+    
+    expect(result).to be_a Hash
+    expect(result).to have_key :data
+    expect(result[:data]).to be_a Hash
+    expect(result[:data]).to have_key :attributes
+    expect(result[:data][:attributes]).to be_a Hash
+  end
 end

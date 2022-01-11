@@ -7,19 +7,18 @@ class TimersFacade
       end
     end
 
-    # def create_timers(params)
-    #   timer_data = TimersService.create_timers(params)
-    #   #require "pry"; binding.pry
-    #   timer1 = Timer.new(timer_data)
-    #   require "pry"; binding.pry
-    # end
-
     def create_timers(params)
       timer_params = {timer: params.to_h}
-      timer = TimersService.create_timers(timer_params)
+      TimersService.create_timers(timer_params)
+    end
+
+    def get_timer(timer_id)
+      TimersService.get_timer(timer_id)
+    end
+
+    def update_timers(timer_id, params)
+      timer = TimersService.update_timers(timer_id, params)
       #require "pry"; binding.pry
-      # timer_data = TimersService.create_timers(params)
-      # Timer.new(timer_data)
     end
   end
 end
