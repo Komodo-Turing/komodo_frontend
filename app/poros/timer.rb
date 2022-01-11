@@ -1,6 +1,7 @@
 class Timer
 
-  attr_reader :name,
+  attr_reader :id,
+              :name,
               :duration,
               :substance,
               :dosage,
@@ -9,6 +10,7 @@ class Timer
 
   def initialize(data)
     #require "pry"; binding.pry
+    @id = data[:id]
     @name = data[:attributes][:name]
     @duration = data[:attributes][:duration]
     @substance = data[:attributes][:substance]

@@ -8,17 +8,21 @@ class TimersFacade
     end
 
     def create_timers(params)
-      timer_params = {timer: params.to_h}
-      TimersService.create_timers(timer_params)
+      TimersService.create_timers(params)
     end
 
     def get_timer(timer_id)
-      TimersService.get_timer(timer_id)
+      timer_params = TimersService.get_timer(timer_id)[:data]
+      Timer.new(timer_params)
     end
 
     def update_timers(timer_id, params)
-      timer = TimersService.update_timers(timer_id, params)
-      #require "pry"; binding.pry
+      #timer_params = {timer: params.to_h}
+      TimersService.update_timers(timer_id, params)
+    end
+
+    def delete_timer(timer_id)
+      TimersService.delete_timer(timer_id)
     end
   end
 end
