@@ -37,5 +37,6 @@ RSpec.describe 'new timer' do
 
     expect(current_path).to eq('/dashboard')
     expect(page).to have_content('Timer #455')
+    expect(page).to_not have_content('These are some notes')
   end
 end

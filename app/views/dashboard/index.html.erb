@@ -27,12 +27,12 @@
   <%= link_to 'Create Contact', '/contacts/new', :class => "btn"  %>
 </div>
 
-<h2>Timers:</h2>
+<h2>Created Timers (click timer):</h2>
 <% if @timers != [] %>
 <% @timers.each do |timer| %>
   <section class="timer">
     <h1><%= link_to timer.name, "/timers/#{timer.id}", method: :get %></h1>
-    <p>Duration: <%= timer.duration %></p>
+    <p>Duration: <%= timer.duration %> minutes</p>
     <p>Substance: <%= timer.substance %></p>
     <p>Dosage: <%= timer.dosage %></p>
     <p>Entry Instructions: <%= timer.entry_instructions %></p>
