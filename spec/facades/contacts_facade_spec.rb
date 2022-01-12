@@ -4,10 +4,19 @@ RSpec.describe ContactsFacade do
   it "can call for user's contacts and construct contacts objects", :vcr do
     user_id = 1
     contacts = ContactsFacade.get_contacts(user_id)
-
     # expect(contacts.count).to eq(5)
     expect(contacts.first.user_id).to eq(1)
-    expect(contacts.first.name).to eq("Stuart Mohr")
+    expect(contacts.first.name).to eq("Marg Lind") #make this more dynamic?
+    expect(contacts.first.name).to be_a String #maybe just this?
+    #or create a contact to start with and then just test for .last.  fix it later
+  end
+
+  it "can call for one contact by its id", :vcr do
+    contact_id = 2
+    contact = ContactsFacade.get_contact(contact_id)
+    # expect(contacts.count).to eq(5)
+    expect(contact.contact_id).to eq("2")
+    expect(contact.name).to eq("Charlsie Feest")
   end
 
   it "can create a contact for a user" do

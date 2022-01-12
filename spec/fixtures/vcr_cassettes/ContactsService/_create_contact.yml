@@ -23,18 +23,18 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Etag:
-      - W/"0c18067706def4684d96a8dbbca4216f"
+      - W/"3f23d24e52cff5aa8592a369619091d4"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - fdd2f60d-015f-43c0-accf-0314729c9c33
+      - b836c50c-dfc5-40d9-87a3-f951455cac8b
       X-Runtime:
-      - '0.001681'
+      - '0.001965'
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
-      string: '{"data":{"id":"73","type":"contact","attributes":{"user_id":2,"name":"John
+      string: '{"data":{"id":"206","type":"contact","attributes":{"user_id":2,"name":"John
         Morris","phone_number":"303-249-3081"}}}'
-  recorded_at: Mon, 10 Jan 2022 15:59:55 GMT
+  recorded_at: Wed, 12 Jan 2022 17:19:16 GMT
 recorded_with: VCR 6.0.0
