@@ -7,4 +7,4 @@ Notes: <%= @timer.notes %><br><br>
 
 <%= button_to 'Edit Timer', "/timers/#{@timer.id}/edit", method: :get %><br>
 <%= button_to 'Delete Timer', "/timers/#{@timer.id}/delete", method: :delete %><br>
-<%= button_to 'Start Timer', "/active_timers", params: {data: {attributes: {user_id: session[:user_id], name: @timer.name, duration: @timer.duration, substance: @timer.substance, dosage: @timer.dosage, entry_instructions: @timer.entry_instructions, notes: @timer.notes}}}, method: :post %>
+<%= button_to 'Start Timer', "/active_timers", params: {data: {attributes: {user_id: session[:user_id], name: @timer.name, start_time: DateTime.now, duration: @timer.duration, substance: @timer.substance, dosage: @timer.dosage, entry_instructions: @timer.entry_instructions, notes: @timer.notes, status: 'Active'}}}, method: :post %>
