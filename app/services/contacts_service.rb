@@ -32,7 +32,7 @@ class ContactsService
 
     private
     def conn
-      Faraday.new("http://localhost:3000")
+      Faraday.new("https://komodo-backend.herokuapp.com")
     end
 
     def parse_data(response)
