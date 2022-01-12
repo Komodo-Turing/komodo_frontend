@@ -11,7 +11,7 @@ Rails.application.routes.draw do
   # post '/contacts', to: "contacts#create"
   post '/dashboard', to: "contacts#create"
 
-  get "/contacts/edit", to: "contacts#edit"
+  get "/contacts/:id/edit", to: "contacts#edit"
   patch "/dashboard", to: "contacts#update"  #?????  check to make sure this is correct
 
   get '/users/edit', to: "users#edit"

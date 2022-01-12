@@ -34,19 +34,22 @@ RSpec.describe 'the welcome page' do
 
   it 'has a button to update an existing contact information' do
     @tony = User.create!(name: "Tony Stark", email: "tonystark@gmail.com", token: "something", google_id: "somethingelse", phone_number: "303-333-1111")
-    @john = ContactsFacade.create_contact(name: "Paul Morris", user_id: @tony.id, phone_number: "222-222-2222")
+    params = { name: "Paul Morris", phone_number: "303-249-3081", user_id: @tony.id }
+    @paul = ContactsFacade.create_contact(params)
 
     visit '/'
     click_link 'Sign-In with Google'
 
-    click_link "Update #{@john.name}'s Info"
 
+    click_link "Update #{@paul.name}'s Info"
+    require "pry"; binding.pry
     fill_in :name, with: 'Sang'
     fill_in :phone_number, with: "777-777-7777"
 
     click_link "Update Contact"
 
     updated_contact = ContactsFacade.get_contact(@john.id)
+    require "pry"; binding.pry
     expect(current_path).to eq('/dashboard')
     expect(page).to have_content("Sang")
     expect(page).to have_content("555-555-5555")
