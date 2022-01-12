@@ -10,13 +10,17 @@
 
 
 <h2>Contacts:</h2>
-<% @contacts.each do |contact| %>
-  <section class="contact">
-    <p>Contact Name: <%= contact.name %></p>
-    <p>Contact Phone Number: <%= contact.phone_number %></p>
-    <p><%= button_to "Update #{contact.name}'s Info", "/contacts/#{contact.contact_id}/edit", method: :get  %></p>
-    <p><%= button_to "Delete #{contact.name}", "/contacts/#{contact.contact_id}", method: :delete  %></p>
-  </section>
+<% if @contacts != [] %>
+  <% @contacts.each do |contact| %>
+    <section class="contact">
+      <p>Contact Name: <%= contact.name %></p>
+      <p>Contact Phone Number: <%= contact.phone_number %></p>
+      <p><%= button_to "Update #{contact.name}'s Info", "/contacts/#{contact.contact_id}/edit", method: :get  %></p>
+      <p><%= button_to "Delete #{contact.name}", "/contacts/#{contact.contact_id}", method: :delete  %></p>
+    </section>
+  <% end %>
+<% else %>
+  Please create contacts.
 <% end %>
 
 <div class="btn btn-primary">
@@ -25,16 +29,19 @@
 
 <h2>Timers:</h2>
 <% if @timers != [] %>
-  <% @timers.each do |timer| %>
-    <section class="timer">
-      <h1><%= link_to timer.name, "/timers/#{timer.id}" %></h1>
-      <p>Duration: <%= timer.duration %></p>
-      <p>Substance: <%= timer.substance %></p>
-      <p>Dosage: <%= timer.dosage %></p>
-      <p>Entry Instructions: <%= timer.entry_instructions %></p>
-      <p>Notes: <%= timer.notes %></p>
-    </section>
-  <% end %>
+<% @timers.each do |timer| %>
+  <section class="timer">
+    <h1><%= link_to timer.name, "/timers/#{timer.id}", method: :get %></h1>
+    <p>Duration: <%= timer.duration %></p>
+    <p>Substance: <%= timer.substance %></p>
+    <p>Dosage: <%= timer.dosage %></p>
+    <p>Entry Instructions: <%= timer.entry_instructions %></p>
+    <p>Notes: <%= timer.notes %></p>
+  </section>
+
+<% end %>
+<% else %>
+  Please create timers.
 <% end %>
 
 <div class="btn btn-primary">

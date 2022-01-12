@@ -1,22 +1,17 @@
 class TimersController < ApplicationController
 
-  def index
-    user_id = session[:user_id]
-
-    @user = User.find(user_id)
-    @timers = TimersFacade.get_timers(user_id)
-  end
-
   def new
+    @user_id = session[:user_id]
   end
 
   def create
-    @timer = TimersFacade.create_timers(timer_params)
+    TimersFacade.create_timers(timer_params)
     redirect_to '/dashboard'
   end
 
   def edit
-    @timer = Timer.find(params[:id])
+    @user_id = session[:user_id]
+    @timer = TimersFacade.get_timer(params[:id])
   end
 
   def update
@@ -25,19 +20,18 @@ class TimersController < ApplicationController
   end
 
   def show
-    @timer = Timer.find(params[:id])
+    @timer = TimersFacade.get_timer(params[:id])
   end
 
   def destroy
-    timer = Timer.find(params[:id])
-    timer.destroy
+    TimersFacade.delete_timer(params[:id])
+    redirect_to '/dashboard'
   end
 
   private
 
   def timer_params
-    params.permit(:user_id, :name, :duration, :substance, :dosage, :entry_instructions, :notes)
+    params.permit(:id, :user_id, :name, :duration, :substance, :dosage, :entry_instructions, :notes)
   end
 
 end
-#@timer = TimersFacade.create_timers(data: {attributes: {user_id: session[:user_id], name: params[:name], duration: params[:duration], substance: params[:substance], dosage: params[:dosage], entry_instructions: params[:entry_instructions], notes: params[:params]}})
