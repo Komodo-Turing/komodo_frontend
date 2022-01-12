@@ -22,12 +22,10 @@ class TimersController < ApplicationController
   def update
     timer = Timer.find(params[:id])
     timer.update(timer_params)
-
   end
 
   def show
     @timer = Timer.find(params[:id])
-
   end
 
   def destroy

@@ -10,6 +10,9 @@ class ContactsFacade
         []
       end
     end
+    # 
+    # def get_contact(contact_id)
+    #   contact_data = Contact
 
     def create_contact(params)
       contact_data = ContactsService.create_contact(params)
