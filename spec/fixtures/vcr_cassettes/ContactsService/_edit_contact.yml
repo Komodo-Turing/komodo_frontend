@@ -1,0 +1,75 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: http://localhost:3000/api/v1/contacts/?name=Stephanie&phone_number=970-249-6781&user_id=168
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.8.0
+      Content-Length:
+      - '0'
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"cf9cf855a7b922f6cb693e9b61449191"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 9a28ea25-153b-4451-bd35-94b54e48bf81
+      X-Runtime:
+      - '0.001979'
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"data":{"id":"170","type":"contact","attributes":{"user_id":168,"name":"Stephanie","phone_number":"970-249-6781"}}}'
+  recorded_at: Wed, 12 Jan 2022 17:05:52 GMT
+- request:
+    method: patch
+    uri: http://localhost:3000/api/v1/contacts/170?phone_number=111-111-1111
+    body:
+      encoding: UTF-8
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.8.0
+      Content-Length:
+      - '0'
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"36eac73e3861d31a68a258a01cbb01b5"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - ebd4af50-0090-44f0-9a4a-557506c00982
+      X-Runtime:
+      - '0.002186'
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"data":{"id":"170","type":"contact","attributes":{"user_id":168,"name":"Stephanie","phone_number":"111-111-1111"}}}'
+  recorded_at: Wed, 12 Jan 2022 17:05:52 GMT
+recorded_with: VCR 6.0.0

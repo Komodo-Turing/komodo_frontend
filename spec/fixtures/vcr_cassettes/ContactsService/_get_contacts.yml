@@ -1,0 +1,89 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://localhost:3000/api/v1/contacts/?user_id=2
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.8.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"3f81720db72f55233c7d28b0cbc60f44"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - cd71e9fb-0cb5-4987-b493-c165864ad1e4
+      X-Runtime:
+      - '0.002326'
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"data":[{"id":"6","type":"contact","attributes":{"user_id":2,"name":"Ms.
+        Jani Wuckert","phone_number":"1-852-427-6780"}},{"id":"7","type":"contact","attributes":{"user_id":2,"name":"Josh
+        Harris II","phone_number":"(765) 197-4754"}},{"id":"8","type":"contact","attributes":{"user_id":2,"name":"Janey
+        Klocko","phone_number":"661.563.2726"}},{"id":"9","type":"contact","attributes":{"user_id":2,"name":"Pres.
+        Doloris Bergstrom","phone_number":"703.379.5532"}},{"id":"16","type":"contact","attributes":{"user_id":2,"name":"Tracey
+        Bogisich DDS","phone_number":"475.622.4213"}},{"id":"17","type":"contact","attributes":{"user_id":2,"name":"Camelia
+        Turcotte","phone_number":"(304) 016-1383"}},{"id":"18","type":"contact","attributes":{"user_id":2,"name":"John
+        Morris","phone_number":"303-249-3081"}},{"id":"19","type":"contact","attributes":{"user_id":2,"name":"John
+        Morris","phone_number":"303-249-3081"}},{"id":"21","type":"contact","attributes":{"user_id":2,"name":"John
+        Morris","phone_number":"303-249-3081"}},{"id":"22","type":"contact","attributes":{"user_id":2,"name":"John
+        Morris","phone_number":"303-249-3081"}},{"id":"23","type":"contact","attributes":{"user_id":2,"name":"John
+        Morris","phone_number":"303-249-3081"}},{"id":"24","type":"contact","attributes":{"user_id":2,"name":"John
+        Morris","phone_number":"303-249-3081"}},{"id":"27","type":"contact","attributes":{"user_id":2,"name":"John
+        Morris","phone_number":"303-249-3081"}},{"id":"29","type":"contact","attributes":{"user_id":2,"name":"John
+        Morris","phone_number":"303-249-3081"}},{"id":"31","type":"contact","attributes":{"user_id":2,"name":"John
+        Morris","phone_number":"303-249-3081"}},{"id":"33","type":"contact","attributes":{"user_id":2,"name":"John
+        Morris","phone_number":"303-249-3081"}},{"id":"35","type":"contact","attributes":{"user_id":2,"name":"John
+        Morris","phone_number":"303-249-3081"}},{"id":"37","type":"contact","attributes":{"user_id":2,"name":"John
+        Morris","phone_number":"303-249-3081"}},{"id":"39","type":"contact","attributes":{"user_id":2,"name":"John
+        Morris","phone_number":"303-249-3081"}},{"id":"41","type":"contact","attributes":{"user_id":2,"name":"John
+        Morris","phone_number":"303-249-3081"}},{"id":"43","type":"contact","attributes":{"user_id":2,"name":"John
+        Morris","phone_number":"303-249-3081"}},{"id":"45","type":"contact","attributes":{"user_id":2,"name":"John
+        Morris","phone_number":"303-249-3081"}},{"id":"52","type":"contact","attributes":{"user_id":2,"name":"Sen.
+        Raven Daniel","phone_number":"(350) 750-2780"}},{"id":"53","type":"contact","attributes":{"user_id":2,"name":"Libbie
+        Quitzon","phone_number":"1-373-001-2317"}},{"id":"54","type":"contact","attributes":{"user_id":2,"name":"John
+        Morris","phone_number":"303-249-3081"}},{"id":"57","type":"contact","attributes":{"user_id":2,"name":"John
+        Morris","phone_number":"303-249-3081"}},{"id":"60","type":"contact","attributes":{"user_id":2,"name":"John
+        Morris","phone_number":"303-249-3081"}},{"id":"63","type":"contact","attributes":{"user_id":2,"name":"John
+        Morris","phone_number":"303-249-3081"}},{"id":"66","type":"contact","attributes":{"user_id":2,"name":"John
+        Morris","phone_number":"303-249-3081"}},{"id":"69","type":"contact","attributes":{"user_id":2,"name":"John
+        Morris","phone_number":"303-249-3081"}},{"id":"70","type":"contact","attributes":{"user_id":2,"name":"John
+        Morris","phone_number":"303-249-3081"}},{"id":"73","type":"contact","attributes":{"user_id":2,"name":"John
+        Morris","phone_number":"303-249-3081"}},{"id":"74","type":"contact","attributes":{"user_id":2,"name":"John
+        Morris","phone_number":"303-249-3081"}},{"id":"77","type":"contact","attributes":{"user_id":2,"name":"John
+        Morris","phone_number":"303-249-3081"}},{"id":"80","type":"contact","attributes":{"user_id":2,"name":"John
+        Morris","phone_number":"303-249-3081"}},{"id":"83","type":"contact","attributes":{"user_id":2,"name":"John
+        Morris","phone_number":"303-249-3081"}},{"id":"86","type":"contact","attributes":{"user_id":2,"name":"John
+        Morris","phone_number":"303-249-3081"}},{"id":"107","type":"contact","attributes":{"user_id":2,"name":"John
+        Morris","phone_number":"303-249-3081"}},{"id":"110","type":"contact","attributes":{"user_id":2,"name":"John
+        Morris","phone_number":"303-249-3081"}},{"id":"113","type":"contact","attributes":{"user_id":2,"name":"John
+        Morris","phone_number":"303-249-3081"}},{"id":"114","type":"contact","attributes":{"user_id":2,"name":"John
+        Morris","phone_number":"303-249-3081"}},{"id":"117","type":"contact","attributes":{"user_id":2,"name":"John
+        Morris","phone_number":"303-249-3081"}},{"id":"120","type":"contact","attributes":{"user_id":2,"name":"John
+        Morris","phone_number":"303-249-3081"}},{"id":"123","type":"contact","attributes":{"user_id":2,"name":"John
+        Morris","phone_number":"303-249-3081"}},{"id":"126","type":"contact","attributes":{"user_id":2,"name":"John
+        Morris","phone_number":"303-249-3081"}},{"id":"129","type":"contact","attributes":{"user_id":2,"name":"John
+        Morris","phone_number":"303-249-3081"}},{"id":"132","type":"contact","attributes":{"user_id":2,"name":"John
+        Morris","phone_number":"303-249-3081"}},{"id":"135","type":"contact","attributes":{"user_id":2,"name":"John
+        Morris","phone_number":"303-249-3081"}},{"id":"138","type":"contact","attributes":{"user_id":2,"name":"John
+        Morris","phone_number":"303-249-3081"}},{"id":"141","type":"contact","attributes":{"user_id":2,"name":"John
+        Morris","phone_number":"303-249-3081"}},{"id":"144","type":"contact","attributes":{"user_id":2,"name":"John
+        Morris","phone_number":"303-249-3081"}},{"id":"164","type":"contact","attributes":{"user_id":2,"name":"John
+        Morris","phone_number":"303-249-3081"}}]}'
+  recorded_at: Wed, 12 Jan 2022 17:05:52 GMT
+recorded_with: VCR 6.0.0

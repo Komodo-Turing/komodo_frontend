@@ -23,6 +23,7 @@ class ContactsController < ApplicationController
   def destroy
     @contact = ContactsFacade.get_contact(params[:id])
     ContactsFacade.delete_contact(@contact.contact_id)
+    redirect_to '/dashboard'
   end
 
   private
