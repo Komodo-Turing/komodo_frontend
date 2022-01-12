@@ -36,5 +36,5 @@
 # Ignore coverage file
 /coverage
 
-# Ignore fixtures folder
+# Ignore Spec fixtures
 /spec/fixtures
