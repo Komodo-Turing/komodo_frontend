@@ -7,7 +7,7 @@ RSpec.describe 'new timer' do
     Rails.application.env_config["omniauth.auth"] = OmniAuth.config.mock_auth[:google_oauth2]
   end
   it 'can create a new timer' do
-    @haewon = User.create!(name: "Haewon Jeon", email: "haewonito@gmail.com", token: "something", google_id: "somethingelse", phone_number: "303-249-3081")
+
 
     visit '/timers/new'
 
@@ -23,7 +23,6 @@ RSpec.describe 'new timer' do
     fill_in :notes, with: 'These are some notes'
 
     click_button "Create Timer"
-    data = TimersFacade.get_timers(@haewon.id)
 
     expect(current_path).to eq('/dashboard')
   end

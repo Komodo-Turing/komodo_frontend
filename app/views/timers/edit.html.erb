@@ -4,22 +4,22 @@
   <%= form.hidden_field :user_id, value: @user_id %>
 
   <%= form.label :name %>
-  <%= form.text_field :name %>
+  <%= form.text_field :name, value: @timer.name %>
   <br><br>
   <%= form.label :duration %>
-  <%= form.number_field :duration %>
+  <%= form.number_field :duration, value: @timer.duration %> minutes
   <br><br>
   <%= form.label :substance %>
-  <%= form.text_field :substance %>
+  <%= form.text_field :substance, value: @timer.substance %>
   <br><br>
   <%= form.label :dosage %>
-  <%= form.text_field :dosage %>
+  <%= form.text_field :dosage, value: @timer.dosage %>
   <br><br>
   <%= form.label :entry_instructions %>
-  <%= form.text_field :entry_instructions %>
+  <%= form.text_field :entry_instructions, value: @timer.entry_instructions %>
   <br><br>
   <%= form.label :notes %>
-  <%= form.text_field :notes %>
+  <%= form.text_field :notes, value: @timer.entry_instructions %>
   <br><br>
   <%= form.submit "Update Timer" %>
 <% end %>
