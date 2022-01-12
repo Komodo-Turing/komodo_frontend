@@ -14,6 +14,7 @@
   <section class="contact">
     <p>Contact Name: <%= contact.name %></p>
     <p>Contact Phone Number: <%= contact.phone_number %></p>
+    <p><%= button_to "Update #{contact.name}'s Info", '/contacts/edit', method: :get  %></p>
   </section>
 <% end %>
 

@@ -10,9 +10,17 @@ class ContactsFacade
         []
       end
     end
-    # 
-    # def get_contact(contact_id)
-    #   contact_data = Contact
+    # contacts_data[:data].map do |contact_data|
+    #   Contact.new(contact_data)
+    # end
+    def get_contact(contact_id)
+      contact_data = ContactsService.get_contact(contact_id)
+      if contact_data[:data] != []
+          Contact.new(contact_data[:data])
+      else
+        []
+      end
+    end
 
     def create_contact(params)
       contact_data = ContactsService.create_contact(params)

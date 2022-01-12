@@ -1,16 +1,14 @@
 ---
 http_interactions:
 - request:
-    method: post
-    uri: http://localhost:3000/api/v1/contacts/?name=John%20Morris&phone_number=303-249-3081&user_id=2
+    method: get
+    uri: http://localhost:3000/api/v1/contacts/2
     body:
-      encoding: UTF-8
+      encoding: US-ASCII
       string: ''
     headers:
       User-Agent:
       - Faraday v1.8.0
-      Content-Length:
-      - '0'
       Accept-Encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
       Accept:
@@ -23,18 +21,18 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Etag:
-      - W/"0c18067706def4684d96a8dbbca4216f"
+      - W/"774010a6d1923c5a1af960e27171e312"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - fdd2f60d-015f-43c0-accf-0314729c9c33
+      - 8fe0f9d1-ef83-43f1-89b7-407ddaa2bb38
       X-Runtime:
-      - '0.001681'
+      - '0.001439'
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
-      string: '{"data":{"id":"73","type":"contact","attributes":{"user_id":2,"name":"John
-        Morris","phone_number":"303-249-3081"}}}'
-  recorded_at: Mon, 10 Jan 2022 15:59:55 GMT
+      string: '{"data":{"id":"2","type":"contact","attributes":{"user_id":1,"name":"Charlsie
+        Feest","phone_number":"1112223333"}}}'
+  recorded_at: Wed, 12 Jan 2022 02:19:57 GMT
 recorded_with: VCR 6.0.0
