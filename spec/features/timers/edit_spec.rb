@@ -36,5 +36,6 @@ RSpec.describe 'new timer' do
     click_button "Update Timer"
 
     expect(current_path).to eq('/dashboard')
+    expect(page).to have_content('Timer #455')
   end
 end

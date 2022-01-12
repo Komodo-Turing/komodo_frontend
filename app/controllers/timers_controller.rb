@@ -15,8 +15,8 @@ class TimersController < ApplicationController
   end
 
   def update
-    timer = Timer.find(params[:id])
-    timer.update(timer_params)
+    TimersFacade.update_timers(params[:id], timer_params)
+    redirect_to '/dashboard'
   end
 
   def show
