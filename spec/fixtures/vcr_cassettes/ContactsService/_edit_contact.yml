@@ -2,13 +2,13 @@
 http_interactions:
 - request:
     method: post
-    uri: http://localhost:3000/api/v1/contacts/?name=Stephanie&phone_number=970-249-6781&user_id=259
+    uri: http://localhost:3000/api/v1/contacts/?name=Stephanie&phone_number=970-249-6781&user_id=485
     body:
       encoding: UTF-8
       string: ''
     headers:
       User-Agent:
-      - Faraday v1.8.0
+      - Faraday v1.9.3
       Content-Length:
       - '0'
       Accept-Encoding:
@@ -23,28 +23,28 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Etag:
-      - W/"766ad9cf776966e8e309aebcca4d249f"
+      - W/"4cd77457b2d7da827a5eaa09b0d20ac4"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 486a6084-a428-4ded-b1c8-5ba8aab76d13
+      - 32e61bf5-1bc6-45b7-9f29-7071f8383bdb
       X-Runtime:
-      - '0.006508'
+      - '0.002229'
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
-      string: '{"data":{"id":"207","type":"contact","attributes":{"user_id":259,"name":"Stephanie","phone_number":"970-249-6781"}}}'
-  recorded_at: Wed, 12 Jan 2022 17:19:16 GMT
+      string: '{"data":{"id":"21","type":"contact","attributes":{"user_id":485,"name":"Stephanie","phone_number":"970-249-6781"}}}'
+  recorded_at: Wed, 12 Jan 2022 17:52:51 GMT
 - request:
     method: patch
-    uri: http://localhost:3000/api/v1/contacts/207?phone_number=111-111-1111
+    uri: http://localhost:3000/api/v1/contacts/21?phone_number=111-111-1111
     body:
       encoding: UTF-8
       string: ''
     headers:
       User-Agent:
-      - Faraday v1.8.0
+      - Faraday v1.9.3
       Content-Length:
       - '0'
       Accept-Encoding:
@@ -53,23 +53,17 @@ http_interactions:
       - "*/*"
   response:
     status:
-      code: 200
-      message: OK
+      code: 204
+      message: No Content
     headers:
-      Content-Type:
-      - application/json; charset=utf-8
-      Etag:
-      - W/"b1c27f1d7c558e458a4ed8008c98e92d"
       Cache-Control:
-      - max-age=0, private, must-revalidate
+      - no-cache
       X-Request-Id:
-      - 1cd17e84-32ba-4121-adc6-446374ff5c27
+      - dcb0370f-0629-446a-9a95-62211b7b358d
       X-Runtime:
-      - '0.002830'
-      Transfer-Encoding:
-      - chunked
+      - '0.004961'
     body:
       encoding: UTF-8
-      string: '{"data":{"id":"207","type":"contact","attributes":{"user_id":259,"name":"Stephanie","phone_number":"111-111-1111"}}}'
-  recorded_at: Wed, 12 Jan 2022 17:19:16 GMT
+      string: ''
+  recorded_at: Wed, 12 Jan 2022 17:52:51 GMT
 recorded_with: VCR 6.0.0

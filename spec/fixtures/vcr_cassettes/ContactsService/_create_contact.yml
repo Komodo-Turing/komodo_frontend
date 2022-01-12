@@ -8,7 +8,7 @@ http_interactions:
       string: ''
     headers:
       User-Agent:
-      - Faraday v1.8.0
+      - Faraday v1.9.3
       Content-Length:
       - '0'
       Accept-Encoding:
@@ -23,18 +23,18 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Etag:
-      - W/"3f23d24e52cff5aa8592a369619091d4"
+      - W/"322fec846aa89dc1d6115cbea10946f7"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - b836c50c-dfc5-40d9-87a3-f951455cac8b
+      - 57e825e4-8df2-47e1-8296-1c8d434d3220
       X-Runtime:
-      - '0.001965'
+      - '0.002127'
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
-      string: '{"data":{"id":"206","type":"contact","attributes":{"user_id":2,"name":"John
+      string: '{"data":{"id":"20","type":"contact","attributes":{"user_id":2,"name":"John
         Morris","phone_number":"303-249-3081"}}}'
-  recorded_at: Wed, 12 Jan 2022 17:19:16 GMT
+  recorded_at: Wed, 12 Jan 2022 17:52:51 GMT
 recorded_with: VCR 6.0.0
