@@ -1,8 +1,6 @@
 class ActiveTimersController < ApplicationController
   def create
-    ActiveTimersFacade.create_active_timer(params[:data])
-
-    redirect_to active_timer_show_path()
+    ActiveTimersFacade.create_active_timer(active_timer_params)
   end
 
   def show
