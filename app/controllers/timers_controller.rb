@@ -15,9 +15,8 @@ class TimersController < ApplicationController
   end
 
   def update
-    require "pry"; binding.pry
-    TimersFacade.update_timers(params[:id], timer_params)
-    redirect_to '/dashboard'
+    timer = Timer.find(params[:id])
+    timer.update(timer_params)
   end
 
   def show

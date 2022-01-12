@@ -1,0 +1,12 @@
+<h1>Create a New Contact:</h1>
+<br><br>
+<%= form_with url: '/dashboard', method: :post, local: true do |form| %>
+  <%= form.hidden_field :user_id, value: @user_id %>
+  <%= form.label :name %>
+  <%= form.text_field :name %>
+  <br><br>
+  <%= form.label :phone_number %>
+  <%= form.text_field :phone_number %>
+  <br><br>
+  <%= form.submit "Create Contact" %>
+<% end %>

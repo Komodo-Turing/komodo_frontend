@@ -7,6 +7,15 @@ Rails.application.routes.draw do
 
   get '/dashboard', to: "dashboard#index"
 
+  get '/contacts/new', to: "contacts#new"
+  # post '/contacts', to: "contacts#create"
+  post '/dashboard', to: "contacts#create"
+
+  get "/contacts/:id/edit", to: "contacts#edit"
+  patch "/contacts/:id", to: "contacts#update" 
+  delete "/contacts/:id", to: "contacts#destroy"
+
+
   get '/users/edit', to: "users#edit"
   patch '/users', to: "users#update"
   get '/logout', to: 'sessions#destroy' #there is no link for this yet

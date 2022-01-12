@@ -5,6 +5,11 @@ class ContactsService
       parse_data(response)
     end
 
+    def get_contact(contact_id)
+      response = conn.get("/api/v1/contacts/#{contact_id}")
+      parse_data(response)
+    end
+
     def create_contact(params = {})
       response = conn.post("/api/v1/contacts/") do |f|
         f.params = params

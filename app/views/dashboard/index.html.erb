@@ -15,11 +15,17 @@
     <section class="contact">
       <p>Contact Name: <%= contact.name %></p>
       <p>Contact Phone Number: <%= contact.phone_number %></p>
+      <p><%= button_to "Update #{contact.name}'s Info", "/contacts/#{contact.contact_id}/edit", method: :get  %></p>
+      <p><%= button_to "Delete #{contact.name}", "/contacts/#{contact.contact_id}", method: :delete  %></p>
     </section>
   <% end %>
 <% else %>
   Please create contacts.
 <% end %>
+
+<div class="btn btn-primary">
+  <%= link_to 'Create Contact', '/contacts/new', :class => "btn"  %>
+</div>
 
 <h2>Timers:</h2>
 <% if @timers != [] %>
