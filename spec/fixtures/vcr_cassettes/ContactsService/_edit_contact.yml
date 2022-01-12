@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: post
-    uri: http://localhost:3000/api/v1/contacts/?name=Stephanie&phone_number=970-249-6781&user_id=168
+    uri: http://localhost:3000/api/v1/contacts/?name=Stephanie&phone_number=970-249-6781&user_id=259
     body:
       encoding: UTF-8
       string: ''
@@ -23,22 +23,22 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Etag:
-      - W/"cf9cf855a7b922f6cb693e9b61449191"
+      - W/"766ad9cf776966e8e309aebcca4d249f"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 9a28ea25-153b-4451-bd35-94b54e48bf81
+      - 486a6084-a428-4ded-b1c8-5ba8aab76d13
       X-Runtime:
-      - '0.001979'
+      - '0.006508'
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
-      string: '{"data":{"id":"170","type":"contact","attributes":{"user_id":168,"name":"Stephanie","phone_number":"970-249-6781"}}}'
-  recorded_at: Wed, 12 Jan 2022 17:05:52 GMT
+      string: '{"data":{"id":"207","type":"contact","attributes":{"user_id":259,"name":"Stephanie","phone_number":"970-249-6781"}}}'
+  recorded_at: Wed, 12 Jan 2022 17:19:16 GMT
 - request:
     method: patch
-    uri: http://localhost:3000/api/v1/contacts/170?phone_number=111-111-1111
+    uri: http://localhost:3000/api/v1/contacts/207?phone_number=111-111-1111
     body:
       encoding: UTF-8
       string: ''
@@ -59,17 +59,17 @@ http_interactions:
       Content-Type:
       - application/json; charset=utf-8
       Etag:
-      - W/"36eac73e3861d31a68a258a01cbb01b5"
+      - W/"b1c27f1d7c558e458a4ed8008c98e92d"
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - ebd4af50-0090-44f0-9a4a-557506c00982
+      - 1cd17e84-32ba-4121-adc6-446374ff5c27
       X-Runtime:
-      - '0.002186'
+      - '0.002830'
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
-      string: '{"data":{"id":"170","type":"contact","attributes":{"user_id":168,"name":"Stephanie","phone_number":"111-111-1111"}}}'
-  recorded_at: Wed, 12 Jan 2022 17:05:52 GMT
+      string: '{"data":{"id":"207","type":"contact","attributes":{"user_id":259,"name":"Stephanie","phone_number":"111-111-1111"}}}'
+  recorded_at: Wed, 12 Jan 2022 17:19:16 GMT
 recorded_with: VCR 6.0.0

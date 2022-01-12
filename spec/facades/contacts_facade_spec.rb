@@ -6,7 +6,7 @@ RSpec.describe ContactsFacade do
     contacts = ContactsFacade.get_contacts(user_id)
     # expect(contacts.count).to eq(5)
     expect(contacts.first.user_id).to eq(1)
-    expect(contacts.first.name).to eq("Irvin Smitham") #make this more dynamic?
+    expect(contacts.first.name).to eq("Marg Lind") #make this more dynamic?
     expect(contacts.first.name).to be_a String #maybe just this?
     #or create a contact to start with and then just test for .last.  fix it later
   end

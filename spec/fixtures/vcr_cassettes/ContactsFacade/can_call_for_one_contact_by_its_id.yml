@@ -25,14 +25,14 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 8fe0f9d1-ef83-43f1-89b7-407ddaa2bb38
+      - f55defb2-1d6e-40d2-9221-0600507fc763
       X-Runtime:
-      - '0.001439'
+      - '0.001873'
       Transfer-Encoding:
       - chunked
     body:
       encoding: UTF-8
       string: '{"data":{"id":"2","type":"contact","attributes":{"user_id":1,"name":"Charlsie
         Feest","phone_number":"1112223333"}}}'
-  recorded_at: Wed, 12 Jan 2022 02:19:57 GMT
+  recorded_at: Wed, 12 Jan 2022 17:19:15 GMT
 recorded_with: VCR 6.0.0
