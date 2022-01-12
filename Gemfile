@@ -8,7 +8,7 @@ gem 'rails', '~> 5.2.6'
 # Use postgresql as the database for Active Record
 gem 'pg', '>= 0.18', '< 2.0'
 # Use Puma as the app server
-
+gem  'faraday'
 
 gem 'puma', '~> 3.11'
 # Use SCSS for stylesheets
@@ -48,6 +48,9 @@ group :development, :test do
   gem 'simplecov'
   gem 'vcr'
   gem 'webmock'
+  gem "factory_bot_rails"
+  gem 'faker'
+  gem 'devise'
 end
 
 group :development do

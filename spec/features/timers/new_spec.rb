@@ -2,15 +2,18 @@ require 'rails_helper'
 
 
 RSpec.describe 'new timer' do
-
+  before do
+    Rails.application.env_config["devise.mapping"] = Devise.mappings[:user] # If using Devise
+    Rails.application.env_config["omniauth.auth"] = OmniAuth.config.mock_auth[:google_oauth2]
+  end
   it 'can create a new timer' do
     @haewon = User.create!(name: "Haewon Jeon", email: "haewonito@gmail.com", token: "something", google_id: "somethingelse", phone_number: "303-249-3081")
-    # visit '/'
-    # click_link 'Sign-In with Google'
-    # save_and_open_page
-    # session[:user_id] = @haewon.id
 
     visit '/timers/new'
+
+    visit '/'
+    click_link 'Sign-In with Google'
+    click_link 'Create Timer'
 
     fill_in :name, with: 'Timer'
     fill_in :duration, with: 120
@@ -21,11 +24,7 @@ RSpec.describe 'new timer' do
 
     click_button "Create Timer"
     data = TimersFacade.get_timers(@haewon.id)
-    #require "pry"; binding.pry
+
     expect(current_path).to eq('/dashboard')
-
   end
-
-
-
 end
