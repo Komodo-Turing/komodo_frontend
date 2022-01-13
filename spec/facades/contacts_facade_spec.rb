@@ -17,6 +17,13 @@ RSpec.describe ContactsFacade do
     expect(contacts.first.phone_number).to eq(params1[:phone_number])
   end
 
+  it "#get_contacts returns an empty array if the user has no contact" do
+    @tony = User.create!(name: "Tony Stark", email: "tonystark@gmail.com", token: "something", google_id: "somethingelse", phone_number: "303-333-1111")
+    contacts = ContactsFacade.get_contacts(@tony.id)
+
+    expect(contacts).to eq([])
+  end
+
   it "can call for one contact by its id" do
     @tony = User.create!(name: "Tony Stark", email: "tonystark@gmail.com", token: "something", google_id: "somethingelse", phone_number: "303-333-1111")
 
@@ -31,6 +38,17 @@ RSpec.describe ContactsFacade do
     expect(contact.name).to eq(params1[:name])
     expect(contact.phone_number).to eq(params1[:phone_number])
   end
+
+  # it "#get_contact returns an empty array if there is no contact with the id" do
+  #   @tony = User.create!(name: "Tony Stark", email: "tonystark@gmail.com", token: "something", google_id: "somethingelse", phone_number: "303-333-1111")
+  #   params1 = { name: "John Morris", phone_number: "111-222-3333", user_id: @tony.id }
+  #   contact1 = ContactsFacade.create_contact(params1)
+  #
+  #   non_existent_contact_id = contact1.contact_id.to_i + 1
+  #
+  #   contact2 = ContactsFacade.get_contact(non_existent_contact_id)
+  #   expect(contact2).to eq([])
+  # end
 
   it "can create a contact for a user" do
     @tony = User.create!(name: "Tony Stark", email: "tonystark@gmail.com", token: "something", google_id: "somethingelse", phone_number: "303-333-1111")
