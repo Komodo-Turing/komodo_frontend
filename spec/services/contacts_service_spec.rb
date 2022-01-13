@@ -22,7 +22,7 @@ RSpec.describe ContactsService do
     expect(response[:data][:attributes][:phone_number]).to eq("303-249-3081")
   end
 
-  it '#edit_contact', :vcr do
+  it '#edit_contact' do
     user = User.create!(name: "Bill Burke", email: "bill@gmail.com", token: "48575656453", google_id: "302-493-2954")
     user_id = user.id
 

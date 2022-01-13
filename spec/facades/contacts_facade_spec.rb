@@ -17,29 +17,30 @@ RSpec.describe ContactsFacade do
     expect(contacts.first.phone_number).to eq(params1[:phone_number])
   end
 
-  xit "can call for one contact by its id" do
+  it "can call for one contact by its id" do
     @tony = User.create!(name: "Tony Stark", email: "tonystark@gmail.com", token: "something", google_id: "somethingelse", phone_number: "303-333-1111")
 
     params1 = { name: "John Morris", phone_number: "111-222-3333", user_id: @tony.id }
     params2 = { name: "Bill Burke", phone_number: "444-555-6666", user_id: @tony.id }
-    ContactsFacade.create_contact(params1)
-    ContactsFacade.create_contact(params2)
+    contact1 = ContactsFacade.create_contact(params1)
+    contact2 = ContactsFacade.create_contact(params2)
 
-    contact = ContactsFacade.get_contact(2)
-    require "pry"; binding.pry
+    contact = ContactsFacade.get_contact(contact1.contact_id)
 
+    expect(contact.user_id).to eq(@tony.id)
+    expect(contact.name).to eq(params1[:name])
+    expect(contact.phone_number).to eq(params1[:phone_number])
   end
 
-  xit "can create a contact for a user" do
-    params = { name: "John Morris", phone_number: "303-249-3081", user_id: 2 }
+  it "can create a contact for a user" do
+    @tony = User.create!(name: "Tony Stark", email: "tonystark@gmail.com", token: "something", google_id: "somethingelse", phone_number: "303-333-1111")
+    params1 = { name: "John Morris", phone_number: "111-222-3333", user_id: @tony.id }
+    contact1 = ContactsFacade.create_contact(params1)
+    contact = ContactsFacade.get_contact(contact1.contact_id)
 
-    ContactsFacade.create_contact(params)
-    contacts = ContactsFacade.get_contacts(user_id)
-
-    expect(contacts.last).to be_a Contact
-    expect(contacts.last.name).to eq("John Morris")
-    expect(contacts.last.phone_number).to eq("303-249-3081")
-    expect(contacts.last.user_id).to eq(2)
+    expect(contact.user_id).to eq(@tony.id)
+    expect(contact.name).to eq(params1[:name])
+    expect(contact.phone_number).to eq(params1[:phone_number])
   end
 
   it "can edit a contact" do
