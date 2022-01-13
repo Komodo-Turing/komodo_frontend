@@ -24,7 +24,7 @@ One of the most effective ways of preventing substance overuse is to make sure s
 - [Local Setup](#local-setup)
 - [External APIs](#external-apis)
 - [Test Suite](#test-suite)
-- [Contributor](#contributor)
+- [Contributors](#contributors)
 
 # Local Setup. SOMEBODY DO THE ADDITIONAL THE BE INSTRUCTION
 - Versions
@@ -62,7 +62,7 @@ This API consumes the following APIs:
 - XX% test coverage for the FrontEnd
 - XX% test coverage for the BackEnd
 
-# Contributor
+# Contributors
 - Jacob Yarborough |  [Github](https://github.com/jacobyarborough)
 - Haewon Jeon      |  [Github](https://github.com/haewonito)
 - Matt Holmes      |  [Github](https://github.com/matthewjholmes)
