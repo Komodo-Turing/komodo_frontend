@@ -30,7 +30,7 @@ One of the most effective ways of preventing substance overuse is to make sure s
 - Versions
   - Rails 5.2.6
   - Ruby 2.7.2
-- Fork and clone the ([FE Repository](https://github.com/Komodo-Turing/komodo_frontend)) and ([BE Repository](https://github.com/Komodo-Turing/komodo_backend))
+- Fork and clone the repository
 - `cd` in your local repo version and run the following commands
   - To install gems:
     -  `bundle` (if this fails, try to `bundle update` and then retry)
