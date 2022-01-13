@@ -39,7 +39,7 @@ RSpec.describe TimersFacade do
         entry_instructions: 'The building code is 1234',
         notes: 'These are some notes'
       }
-
+    TimersService.create_timers(timer_params)
     timer = TimersFacade.get_timer(timer_id)
 
     expect(timer.name).to eq('Timer')
@@ -63,7 +63,7 @@ RSpec.describe TimersFacade do
         entry_instructions: 'The building code is 1234',
         notes: 'These are some notes'
       }
-
+    TimersService.create_timers(params)
     timer = TimersFacade.update_timers(timer_id, params)
 
     expect(timer[:data][:attributes][:name]).to eq('Timer')

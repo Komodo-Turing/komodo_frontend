@@ -57,8 +57,20 @@ RSpec.describe TimersService do
   end
 
   it 'can get a timer' do
-    timer_id = 455
+    @haewon = User.create!(name: "Haewon Jeon", email: "haewonito@gmail.com", token: "something", google_id: "somethingelse", phone_number: "303-249-3081")
 
+    timer_id = 455
+    timer_params = {
+      id: 455,
+      user_id: @haewon.id,
+      name: 'Timer',
+      duration: 120,
+      substance: 'Drug',
+      dosage: '10oz',
+      entry_instructions: 'The building code is 1234',
+      notes: 'These are some notes'
+    }
+    TimersService.create_timers(timer_params)
     result = TimersService.get_timer(timer_id)
 
     expect(result).to be_a Hash
