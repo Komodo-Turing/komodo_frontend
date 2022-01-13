@@ -1,6 +1,7 @@
 # README
 
 ![rails-badge](https://img.shields.io/badge/Rails-5.2.6-informational?style=flat-square) ![ruby-badge](https://img.shields.io/badge/Ruby-2.7.2-informational?style=flat-square)
+
 One of the most effective ways of preventing overuse is to make sure someone stays with you while you use a substance. This, however, is not always an option for everybody. This Rails App ([FE deployed endpoint](https://komodo-frontend.herokuapp.com)) ([BE deployed endpoint](https://komodo-backend.herokuapp.com)) was created in hopes of mitigating this issue. It lets a client create emergency contacts and start a timer when they are about to use a substance. If the timer is not stopped before it runs out, it will text their contacts with the client's address, map and other information pre-created by the client.    
 
 #### What can I do on Komodo?
@@ -15,15 +16,13 @@ One of the most effective ways of preventing overuse is to make sure someone sta
   - Cancel the timer before it goes off
 
 #### Stack
-- Ruby on Rails, RSpec, Heroku, CircleCI, PostgreSQL
+- Ruby on Rails, RSpec, Heroku, CircleCI, PostgreSQL, Sidekiq
+- Some of the gems: redis, pry, simplecov, vcr, webmock
 
 # Readme Content
 - [Local Setup](#local-setup)
 - [External APIs](#external-apis)
 - [Test Suite](#test-suite)
-- [GraphQL Schema](#graphql-schema)
-- [Database Schema](#database-schema)
-- [Project Tracking](#project-tracking)
 - [Contributor](#contributor)
 
 # Local Setup. SOMEBODY DO THE ADDITIONAL THE BE INSTRUCTION
@@ -53,6 +52,19 @@ One of the most effective ways of preventing overuse is to make sure someone sta
 
 # External APIs
 This API consumes the following APIs:
-- [Twilio](https://www.twilio.com/docs/sms/api) to search for images at a destination
-  - Requirements for use: [properly provide attribution for the photographer and Unsplash](https://help.unsplash.com/en/articles/2511315-guideline-attribution)
-- [MapQuest Geocoding API](https://developer.mapquest.com/documentation/geocoding-api/) to assign latitude and longitude to a trip's location
+- [Twilio](https://www.twilio.com/docs/sms/api) to send text messages
+- [MapQuest Geocoding API](https://developer.mapquest.com/documentation/geocoding-api/) to provide map image
+
+# Test Suite
+- Run with `bundle exec rspec`
+- All tests should be passing
+- XX% test coverage for the FrontEnd
+- XX% test coverage for the BackEnd
+
+# Contributor
+- Jacob Yarborough |  [Github](https://github.com/jacobyarborough)
+- Haewon Jeon      |  [Github](https://github.com/haewonito)
+- Matt Holmes      |  [Github](https://github.com/matthewjholmes)
+- Stephanie Helm   |  [Github](https://github.com/stephaniemhelm)
+- Micha Bernhard   |  [Github](https://github.com/michab17)
+
