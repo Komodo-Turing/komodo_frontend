@@ -5,6 +5,7 @@ class TimersController < ApplicationController
   end
 
   def create
+    @user_id = session[:user_id]
     TimersFacade.create_timers(timer_params)
     redirect_to '/dashboard'
   end
@@ -15,15 +16,18 @@ class TimersController < ApplicationController
   end
 
   def update
+    @user_id = session[:user_id]
     TimersFacade.update_timers(params[:id], timer_params)
     redirect_to '/dashboard'
   end
 
   def show
+    @user_id = session[:user_id]
     @timer = TimersFacade.get_timer(params[:id])
   end
 
   def destroy
+    @user_id = session[:user_id]
     TimersFacade.delete_timer(params[:id])
     redirect_to '/dashboard'
   end
