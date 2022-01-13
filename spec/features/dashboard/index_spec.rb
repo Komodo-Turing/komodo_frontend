@@ -48,7 +48,7 @@ RSpec.describe 'the welcome page' do
 
     expect(current_path).to eq("/dashboard")
 
-    click_button "Update Sang's Info"
+    click_link "Update Sang's Info"
     fill_in :name, with: 'multivitamin'
     fill_in :phone_number, with: "777-777-7777"
 
@@ -73,7 +73,7 @@ RSpec.describe 'the welcome page' do
 
     expect(current_path).to eq("/dashboard")
 
-    click_button "Delete somethingridiculousfordelete"
+    click_link "Delete somethingridiculousfordelete"
 
     # updated_contact = ContactsFacade.get_contact(@john.id)
     expect(current_path).to eq('/dashboard')

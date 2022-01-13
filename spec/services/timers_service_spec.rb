@@ -39,6 +39,7 @@ RSpec.describe TimersService do
   it 'can get timers' do
     @haewon = User.create!(name: "Haewon Jeon", email: "haewonito@gmail.com", token: "something", google_id: "somethingelse", phone_number: "303-249-3081")
     timer_params = {
+        id: 455,
         user_id: @haewon.id,
         name: 'Timer',
         duration: 120,
@@ -48,8 +49,6 @@ RSpec.describe TimersService do
         notes: 'These are some notes'
       }
 
-    TimersService.create_timers(timer_params)
-
     results = TimersService.get_timers(@haewon.id)
     first_timer = results.first
 
@@ -58,7 +57,7 @@ RSpec.describe TimersService do
   end
 
   it 'can get a timer' do
-    timer_id = 185
+    timer_id = 455
 
     result = TimersService.get_timer(timer_id)
 
@@ -70,8 +69,9 @@ RSpec.describe TimersService do
   end
 
   it 'can update a timer' do
-    timer_id = 185
+    timer_id = 455
     params = {
+        id: 455,
         name: 'Timer',
         duration: 120,
         substance: 'Drug',
@@ -90,18 +90,23 @@ RSpec.describe TimersService do
   end
 
   it 'can delete a timer' do
-    timer_id = 187
-    params = {
-      name: 'Timer',
-      duration: 120,
-      substance: 'Drug',
-      dosage: '10oz',
-      entry_instructions: 'The building code is 1234',
-      notes: 'These are some notes'
+    @haewon = User.create!(name: "Haewon Jeon", email: "haewonito@gmail.com", token: "something", google_id: "somethingelse", phone_number: "303-249-3081")
+    timer_id = 300
+    timer_params = {
+        id: 300,
+        user_id: @haewon.id,
+        name: 'Timer',
+        duration: 120,
+        substance: 'Drug',
+        dosage: '10oz',
+        entry_instructions: 'The building code is 1234',
+        notes: 'These are some notes'
       }
+
+    TimersService.create_timers(timer_params)
 
     timer = TimersService.delete_timer(timer_id)
 
-    expect(timer[:status]).to eq(404)
+    expect(timer[:status]).to eq(nil)
   end
 end

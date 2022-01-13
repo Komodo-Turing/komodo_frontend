@@ -10,7 +10,7 @@ RSpec.describe 'new timer' do
   it 'can edit a timer' do
     visit '/'
     click_link 'Sign-In with Google'
-    click_link 'Create Timer'
+    click_link 'Create New Timer'
 
     fill_in :name, with: 'Timer'
     fill_in :duration, with: 120
