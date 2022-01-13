@@ -63,9 +63,9 @@ This API consumes the following APIs:
 - XX% test coverage for the BackEnd
 
 # Contributors
-- Jacob Yarborough |  [Github](https://github.com/jacobyarborough)
-- Haewon Jeon      |  [Github](https://github.com/haewonito)
-- Matt Holmes      |  [Github](https://github.com/matthewjholmes)
-- Stephanie Helm   |  [Github](https://github.com/stephaniemhelm)
-- Micha Bernhard   |  [Github](https://github.com/michab17)
+- Jacob Yarborough |  [Github](https://github.com/jacobyarborough)   |   [LinkedIn](https://www.linkedin.com/in/jacob-yarborough/)
+- Haewon Jeon      |  [Github](https://github.com/haewonito)   |   [LinkedIn](linkedin.com/in/haewonito/)
+- Matt Holmes      |  [Github](https://github.com/matthewjholmes)   |   [LinkedIn](https://www.linkedin.com/in/matthew-j-holmes/)
+- Stephanie Helm   |  [Github](https://github.com/stephaniemhelm)   |   [LinkedIn](https://www.linkedin.com/in/stephanie-helm-a4a032220/)
+- Micha Bernhard   |  [Github](https://github.com/michab17)   |   [LinkedIn](https://www.linkedin.com/in/micha-bernhard/)
 
