@@ -5,8 +5,21 @@ class ContactsController < ApplicationController
 
   def create
     @user_id = session[:user_id]
-    new_contact = ContactsFacade.create_contact(contact_params)
-    redirect_to '/dashboard'
+    @contacts = ContactsFacade.get_contacts(@user_id)
+     if @contacts.count < 5
+       new_contact = ContactsFacade.create_contact(contact_params)
+       redirect_to '/dashboard'
+       # if new_contact.save  #can't do this. instead, we will have to call the back and get 200 response.
+       #do it if have time later.  not urgent
+       #   flash[:notice] = "New Contact Successfully Created!"
+       #   redirect_to '/dashboard'
+       # else
+       #   flash[:alert] = "Creating New Contact Failed. Try Again"
+       # end
+     else
+       flash[:alert] = "You can have up to 5 contacts. Either delete or update an existing contact instead!!!!!"
+       redirect_to '/dashboard'
+     end
   end
 
   def edit
