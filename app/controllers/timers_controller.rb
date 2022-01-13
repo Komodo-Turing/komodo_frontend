@@ -20,6 +20,8 @@ class TimersController < ApplicationController
   end
 
   def show
+    user_id = session[:user_id]
+    @user = User.find(user_id)
     @timer = TimersFacade.get_timer(params[:id])
   end
 
