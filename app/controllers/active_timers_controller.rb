@@ -4,8 +4,10 @@ class ActiveTimersController < ApplicationController
     #redirect_to "/active_timers/#{active_timer_params[:id]}"
   end
 
-  def show
-
+  def update
+    if params[:update_status]
+      ActiveTimersFacade.update_active_timer(params[:id], {status: 'Stopped'})
+    end
   end
 
   private
