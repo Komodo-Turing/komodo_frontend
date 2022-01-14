@@ -32,7 +32,7 @@ class ContactsService
 
     private
     def conn
-      Faraday.new("https://komodo-backend.herokuapp.com")
+      Faraday.new("https://fathomless-cove-81382.herokuapp.com")
     end
 
     def parse_data(response)
