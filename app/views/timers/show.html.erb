@@ -6,6 +6,7 @@
 <h1>Notes: <%= @timer.notes %><br></h1><br>
 
 
+
 <%= button_to 'Start Timer', "/active_timers", params: {user_id: session[:user_id], name: @timer.name, start_time: DateTime.now, duration: @timer.duration, substance: @timer.substance, dosage: @timer.dosage, entry_instructions: @timer.entry_instructions, notes: @timer.notes, status: 'Active'}, method: :post, id: 'start' %><br>
 
 <script>

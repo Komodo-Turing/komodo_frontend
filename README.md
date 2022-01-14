@@ -1,10 +1,14 @@
-# README
+###update test coverage and do screenshots
+
+<img width="942" alt="Screen Shot 2022-01-13 at 5 07 48 PM" src="https://user-images.githubusercontent.com/86392608/149428892-9e313d17-529b-4208-96e1-cb2153a3a2c9.png">
+
 
 ![rails-badge](https://img.shields.io/badge/Rails-5.2.6-informational?style=flat-square) ![ruby-badge](https://img.shields.io/badge/Ruby-2.7.2-informational?style=flat-square)
-One of the most effective ways of preventing overuse is to make sure someone stays with you while you use a substance. This, however, is not always an option for everybody. This Rails App ([FE deployed endpoint](https://komodo-frontend.herokuapp.com)) ([BE deployed endpoint](https://komodo-backend.herokuapp.com)) was created in hopes of mitigating this issue. It lets a client create emergency contacts and start a timer when they are about to use a substance. If the timer is not stopped before it runs out, it will text their contacts with the client's address, map and other information pre-created by the client.    
+
+One of the most effective ways of preventing substance overuse is to make sure someone stays with you while you use a substance. This, however, is not always an option for everybody. This Rails App ([FE deployed endpoint](https://komodo-frontend.herokuapp.com)) ([BE deployed endpoint](https://komodo-backend.herokuapp.com)) was created in hopes of mitigating this issue. It lets a client create emergency contacts and start a timer when they are about to use a substance. If the timer is not stopped before it runs out, it will text their contacts with the client's address, map and other information pre-created by the client.    
 
 #### What can I do on Komodo?
-  - Sign up and sign in using Google OAuth 2.0
+  - Sign up and sign in using [Google OAuth 2.0](https://console.cloud.google.com/)
   - Create emergency contacts with their name and phone number
   - Create timers with information such as:
     - Duration in minutes (the only required information)
@@ -15,22 +19,21 @@ One of the most effective ways of preventing overuse is to make sure someone sta
   - Cancel the timer before it goes off
 
 #### Stack
-- Ruby on Rails, RSpec, Heroku, CircleCI, PostgreSQL
+- Ruby on Rails, RSpec, Heroku, CircleCI, PostgreSQL, Sidekiq
+- Some of the gems: redis, pry, simplecov, vcr, webmock
 
 # Readme Content
 - [Local Setup](#local-setup)
 - [External APIs](#external-apis)
 - [Test Suite](#test-suite)
-- [GraphQL Schema](#graphql-schema)
-- [Database Schema](#database-schema)
-- [Project Tracking](#project-tracking)
-- [Contributor](#contributor)
+- [Screen Shots](#screen-shots)
+- [Contributors](#contributors)
 
 # Local Setup. SOMEBODY DO THE ADDITIONAL THE BE INSTRUCTION
 - Versions
   - Rails 5.2.6
   - Ruby 2.7.2
-- Fork and clone the ([FE Repository](https://github.com/Komodo-Turing/komodo_frontend)) and ([BE Repository](https://github.com/Komodo-Turing/komodo_backend))
+- Fork and clone both the [backend](https://github.com/Komodo-Turing/komodo_backend) and [frontend](https://github.com/Komodo-Turing/komodo_frontend) repositories
 - `cd` in your local repo version and run the following commands
   - To install gems:
     -  `bundle` (if this fails, try to `bundle update` and then retry)
@@ -53,6 +56,21 @@ One of the most effective ways of preventing overuse is to make sure someone sta
 
 # External APIs
 This API consumes the following APIs:
-- [Twilio](https://www.twilio.com/docs/sms/api) to search for images at a destination
-  - Requirements for use: [properly provide attribution for the photographer and Unsplash](https://help.unsplash.com/en/articles/2511315-guideline-attribution)
-- [MapQuest Geocoding API](https://developer.mapquest.com/documentation/geocoding-api/) to assign latitude and longitude to a trip's location
+- [Twilio](https://www.twilio.com/docs/sms/api) to send text messages
+- [MapQuest Geocoding API](https://developer.mapquest.com/documentation/geocoding-api/) to provide map image
+
+# Test Suite
+- Run with `bundle exec rspec`
+- All tests should be passing
+- XX% test coverage for the FrontEnd
+- XX% test coverage for the BackEnd
+
+# Screen Shots
+
+# Contributors
+- Jacob Yarborough |  [Github](https://github.com/jacobyarborough)   |   [LinkedIn](https://www.linkedin.com/in/jacob-yarborough/)
+- Haewon Jeon      |  [Github](https://github.com/haewonito)   |   [LinkedIn](linkedin.com/in/haewonito/)
+- Matt Holmes      |  [Github](https://github.com/matthewjholmes)   |   [LinkedIn](https://www.linkedin.com/in/matthew-j-holmes/)
+- Stephanie Helm   |  [Github](https://github.com/stephaniemhelm)   |   [LinkedIn](https://www.linkedin.com/in/stephanie-helm-a4a032220/)
+- Micha Bernhard   |  [Github](https://github.com/michab17)   |   [LinkedIn](https://www.linkedin.com/in/micha-bernhard/)
+
