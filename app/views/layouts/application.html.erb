@@ -14,8 +14,6 @@
 
   <body>
     <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
-
-
       <div class="container-fluid">
         <a class="navbar-brand" href="#">Komodo</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
@@ -37,7 +35,13 @@
         </div>
       </div>
     </nav>
-
+      <% if flash.any? %>
+        <% flash.each do |type, msg| %>
+          <div>
+            <%= msg %>
+          </div>
+        <% end %>
+      <% end %>
     <%= yield %>
   </body>
 </html>

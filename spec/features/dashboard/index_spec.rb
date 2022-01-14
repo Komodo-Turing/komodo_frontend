@@ -32,6 +32,22 @@ RSpec.describe 'the welcome page' do
     expect(page).to have_content("555-555-5555")
   end
 
+  it 'does not create a new contact and send warning message if user already has five contacts' do
+    @tony = User.create!(name: "Tony Stark", email: "tonystark@gmail.com", token: "something", google_id: "somethingelse", phone_number: "303-333-1111")
+
+    visit '/'
+    click_link 'Sign-In with Google'
+
+    6.times do
+      click_link 'Create Contact'
+      fill_in :name, with: 'Sang'
+      fill_in :phone_number, with: "555-555-5555"
+      click_button "Create Contact"
+    end
+
+    expect(page).to have_content("You can have up to 5 contacts. Either delete or update an existing contact instead!!!!!")
+  end
+
   it 'has a button to update an existing contact information' do
     @tony = User.create!(name: "Tony Stark", email: "tonystark@gmail.com", token: "something", google_id: "somethingelse", phone_number: "303-333-1111")
     # params = { name: "Paul", phone_number: "303-249-3081", user_id: @tony.id }
@@ -48,7 +64,7 @@ RSpec.describe 'the welcome page' do
 
     expect(current_path).to eq("/dashboard")
 
-    click_button "Update Sang's Info"
+    click_link "Update Sang's Info"
     fill_in :name, with: 'multivitamin'
     fill_in :phone_number, with: "777-777-7777"
 
@@ -73,7 +89,7 @@ RSpec.describe 'the welcome page' do
 
     expect(current_path).to eq("/dashboard")
 
-    click_button "Delete somethingridiculousfordelete"
+    click_link "Delete somethingridiculousfordelete"
 
     # updated_contact = ContactsFacade.get_contact(@john.id)
     expect(current_path).to eq('/dashboard')

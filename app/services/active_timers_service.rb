@@ -17,7 +17,7 @@ class ActiveTimersService
     private
 
     def conn
-      Faraday.new("https://komodo-backend.herokuapp.com")
+      Faraday.new("http://localhost:3000")
     end
 
     def parse_data(response)
