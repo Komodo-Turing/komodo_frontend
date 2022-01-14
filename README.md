@@ -25,7 +25,6 @@ One of the most effective ways of preventing substance overuse is to make sure s
 # Readme Content
 - [Local Setup](#local-setup)
 - [External APIs](#external-apis)
-- [Test Suite](#test-suite)
 - [Screen Shots](#screen-shots)
 - [Contributors](#contributors)
 
