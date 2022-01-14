@@ -7,6 +7,12 @@ class ActiveTimersService
       parse_data(response)
     end
 
+    def get_active_timer(id)
+      response = conn.get("/api/v1/active_timers/#{id}")
+
+      parse_data(response)
+    end
+
     def update_active_timer(id, params)
       response = conn.patch("/api/v1/active_timers/#{id}?#{params}") do |f|
         f.params = params
