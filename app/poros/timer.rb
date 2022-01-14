@@ -6,7 +6,8 @@ class Timer
               :substance,
               :dosage,
               :entry_instructions,
-              :notes
+              :notes,
+              :address
 
   def initialize(data)
     @id = data[:id]
@@ -16,5 +17,6 @@ class Timer
     @dosage = data[:attributes][:dosage]
     @entry_instructions = data[:attributes][:entry_instructions]
     @notes = data[:attributes][:notes]
+    @address = data[:attributes][:address]
   end
 end

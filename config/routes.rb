@@ -12,7 +12,7 @@ Rails.application.routes.draw do
   post '/dashboard', to: "contacts#create"
 
   get "/contacts/:id/edit", to: "contacts#edit"
-  patch "/contacts/:id", to: "contacts#update" 
+  patch "/contacts/:id", to: "contacts#update"
   delete "/contacts/:id", to: "contacts#destroy"
 
 
@@ -32,4 +32,5 @@ Rails.application.routes.draw do
 
   post '/active_timers', to: 'active_timers#create'
   get '/active_timers/:id', to: 'active_timers#show'
+  patch '/active_timers/:id', to: 'active_timers#update'
 end

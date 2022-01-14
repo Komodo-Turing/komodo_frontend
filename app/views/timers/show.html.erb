@@ -4,7 +4,8 @@
 <h1>Dosage: <%= @timer.dosage %></h1><br>
 <h1>Entry Instructions: <%= @timer.entry_instructions %></h1><br>
 <h1>Notes: <%= @timer.notes %><br></h1><br>
+<h1>Address: <%= @timer.address %> </h1>
 
-<%= button_to 'Start Timer', "/active_timers", params: {user_id: session[:user_id], name: @timer.name, start_time: DateTime.now, duration: @timer.duration, substance: @timer.substance, dosage: @timer.dosage, entry_instructions: @timer.entry_instructions, notes: @timer.notes, status: 'Active'}, method: :post %><br>
+<%= button_to 'Start Timer', "/active_timers", params: {user_id: session[:user_id], user_name: @user.name, name: @timer.name, start_time: DateTime.now, duration: @timer.duration, substance: @timer.substance, dosage: @timer.dosage, entry_instructions: @timer.entry_instructions, notes: @timer.notes, status: 'Active', address: @timer.address}, method: :post %><br>
 <%= button_to 'Edit Timer', "/timers/#{@timer.id}/edit", method: :get %><br>
 <%= button_to 'Delete Timer', "/timers/#{@timer.id}/delete", method: :delete %><br>

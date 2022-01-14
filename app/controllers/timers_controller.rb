@@ -23,6 +23,7 @@ class TimersController < ApplicationController
 
   def show
     @user_id = session[:user_id]
+    @user = User.find(@user_id)
     @timer = TimersFacade.get_timer(params[:id])
   end
 
@@ -35,7 +36,7 @@ class TimersController < ApplicationController
   private
 
   def timer_params
-    params.permit(:id, :user_id, :name, :duration, :substance, :dosage, :entry_instructions, :notes)
+    params.permit(:id, :user_id, :name, :duration, :substance, :dosage, :entry_instructions, :notes, :address)
   end
 
 end

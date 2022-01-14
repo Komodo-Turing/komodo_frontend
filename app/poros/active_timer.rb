@@ -1,6 +1,7 @@
 class ActiveTimer
-  attr_reader :user_id,
-              :name, 
+  attr_reader :id,
+              :user_id,
+              :name,
               :start_time,
               :duration,
               :substance,
@@ -10,14 +11,15 @@ class ActiveTimer
               :status
 
   def initialize(active_timer_data)
-    @user_id = active_timer_data[:user]
-    @name = active_timer_data[:name]
+    @id = active_timer_data[:id]
+    @user_id = active_timer_data[:attributes][:user]
+    @name = active_timer_data[:attributes][:name]
     @start_time = DateTime.now
-    @duration = active_timer_data[:duration]
-    @substance = active_timer_data[:substance]
-    @dosage = active_timer_data[:dosage]
-    @entry_instructions = active_timer_data[:entry_instructions]
-    @notes = active_timer_data[:notes]
+    @duration = active_timer_data[:attributes][:duration]
+    @substance = active_timer_data[:attributes][:substance]
+    @dosage = active_timer_data[:attributes][:dosage]
+    @entry_instructions = active_timer_data[:attributes][:entry_instructions]
+    @notes = active_timer_data[:attributes][:notes]
     @status = 'active'
   end
 end
