@@ -6,7 +6,7 @@ RSpec.describe TimersFacade do
     timer_params = {
         user_id: @haewon.id,
         name: 'Timer',
-        duration: 120,
+        duration: 1,
         substance: 'Drug',
         dosage: '10oz',
         entry_instructions: 'The building code is 1234',
@@ -19,7 +19,7 @@ RSpec.describe TimersFacade do
     first_timer = data.first
 
     expect(first_timer.name).to eq('Timer')
-    expect(first_timer.duration).to eq(120)
+    expect(first_timer.duration).to eq(1)
     expect(first_timer.substance).to eq('Drug')
     expect(first_timer.dosage).to eq('10oz')
     expect(first_timer.entry_instructions).to eq('The building code is 1234')
@@ -33,7 +33,7 @@ RSpec.describe TimersFacade do
         id: 455,
         user_id: @haewon.id,
         name: 'Timer',
-        duration: 120,
+        duration: 1,
         substance: 'Drug',
         dosage: '10oz',
         entry_instructions: 'The building code is 1234',
@@ -43,7 +43,7 @@ RSpec.describe TimersFacade do
     timer = TimersFacade.get_timer(timer_id)
 
     expect(timer.name).to eq('Timer')
-    expect(timer.duration).to eq(120)
+    expect(timer.duration).to eq(1)
     expect(timer.substance).to eq('Drug')
     expect(timer.dosage).to eq('10oz')
     expect(timer.entry_instructions).to eq('The building code is 1234')
@@ -57,7 +57,7 @@ RSpec.describe TimersFacade do
         id: 455,
         user_id: @haewon.id,
         name: 'Timer',
-        duration: 120,
+        duration: 1,
         substance: 'Drug',
         dosage: '10oz',
         entry_instructions: 'The building code is 1234',
@@ -67,7 +67,7 @@ RSpec.describe TimersFacade do
     timer = TimersFacade.update_timers(timer_id, params)
 
     expect(timer[:data][:attributes][:name]).to eq('Timer')
-    expect(timer[:data][:attributes][:duration]).to eq(120)
+    expect(timer[:data][:attributes][:duration]).to eq(1)
     expect(timer[:data][:attributes][:substance]).to eq('Drug')
     expect(timer[:data][:attributes][:dosage]).to eq('10oz')
     expect(timer[:data][:attributes][:entry_instructions]).to eq('The building code is 1234')
@@ -81,7 +81,7 @@ RSpec.describe TimersFacade do
         id: 650,
         user_id: @haewon.id,
         name: 'Timer',
-        duration: 120,
+        duration: 1,
         substance: 'Drug',
         dosage: '10oz',
         entry_instructions: 'The building code is 1234',

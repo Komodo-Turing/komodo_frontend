@@ -13,7 +13,7 @@ RSpec.describe 'new timer' do
     click_link 'Create New Timer'
 
     fill_in :name, with: 'Timer'
-    fill_in :duration, with: 120
+    fill_in :duration, with: 1
     fill_in :substance, with: 'Drug'
     fill_in :dosage, with: '10oz'
     fill_in :entry_instructions, with: 'The building code is 1234'
@@ -27,7 +27,7 @@ RSpec.describe 'new timer' do
     click_button 'Edit Timer'
 
     fill_in :name, with: 'Timer #455'
-    fill_in :duration, with: 12
+    fill_in :duration, with: 1
     fill_in :substance, with: 'Drug #2'
     fill_in :dosage, with: '10oz'
     fill_in :entry_instructions, with: 'The building code is 1234'
