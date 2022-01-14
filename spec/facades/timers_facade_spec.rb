@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 RSpec.describe TimersFacade do
-  it 'can get timers' do
+  it 'can create timers' do
     @haewon = User.create!(name: "Haewon Jeon", email: "haewonito@gmail.com", token: "something", google_id: "somethingelse", phone_number: "303-249-3081")
     timer_params = {
         user_id: @haewon.id,
@@ -14,6 +14,7 @@ RSpec.describe TimersFacade do
       }
 
     TimersService.create_timers(timer_params)
+
     data = TimersFacade.get_timers(@haewon.id)
     first_timer = data.first
 
@@ -26,8 +27,19 @@ RSpec.describe TimersFacade do
   end
 
   it 'can get a timer' do
-    timer_id = 185
-
+    @haewon = User.create!(name: "Haewon Jeon", email: "haewonito@gmail.com", token: "something", google_id: "somethingelse", phone_number: "303-249-3081")
+    timer_id = 455
+    timer_params = {
+        id: 455,
+        user_id: @haewon.id,
+        name: 'Timer',
+        duration: 120,
+        substance: 'Drug',
+        dosage: '10oz',
+        entry_instructions: 'The building code is 1234',
+        notes: 'These are some notes'
+      }
+    TimersService.create_timers(timer_params)
     timer = TimersFacade.get_timer(timer_id)
 
     expect(timer.name).to eq('Timer')
@@ -39,15 +51,19 @@ RSpec.describe TimersFacade do
   end
 
   it 'can update_timers' do
-    timer_id = 185
+    @haewon = User.create!(name: "Haewon Jeon", email: "haewonito@gmail.com", token: "something", google_id: "somethingelse", phone_number: "303-249-3081")
+    timer_id = 455
     params = {
-      name: 'Timer',
-      duration: 120,
-      substance: 'Drug',
-      dosage: '10oz',
-      entry_instructions: 'The building code is 1234',
-      notes: 'These are some notes'
+        id: 455,
+        user_id: @haewon.id,
+        name: 'Timer',
+        duration: 120,
+        substance: 'Drug',
+        dosage: '10oz',
+        entry_instructions: 'The building code is 1234',
+        notes: 'These are some notes'
       }
+    TimersService.create_timers(params)
     timer = TimersFacade.update_timers(timer_id, params)
 
     expect(timer[:data][:attributes][:name]).to eq('Timer')
@@ -59,18 +75,22 @@ RSpec.describe TimersFacade do
   end
 
   it 'can delete a timer' do
-    timer_id = 187
+    @haewon = User.create!(name: "Haewon Jeon", email: "haewonito@gmail.com", token: "something", google_id: "somethingelse", phone_number: "303-249-3081")
+    timer_id = 650
     params = {
-      name: 'Timer',
-      duration: 120,
-      substance: 'Drug',
-      dosage: '10oz',
-      entry_instructions: 'The building code is 1234',
-      notes: 'These are some notes'
+        id: 650,
+        user_id: @haewon.id,
+        name: 'Timer',
+        duration: 120,
+        substance: 'Drug',
+        dosage: '10oz',
+        entry_instructions: 'The building code is 1234',
+        notes: 'These are some notes'
       }
+    TimersService.create_timers(params)
 
     timer = TimersFacade.delete_timer(timer_id)
 
-    expect(timer[:status]).to eq(404)
+    expect(timer[:status]).to eq(nil)
   end
 end

@@ -1,35 +1,64 @@
 require "rails_helper"
 
 RSpec.describe ContactsFacade do
-  it "can call for user's contacts and construct contacts objects", :vcr do
-    user_id = 1
-    contacts = ContactsFacade.get_contacts(user_id)
-    # expect(contacts.count).to eq(5)
-    expect(contacts.first.user_id).to eq(1)
-    expect(contacts.first.name).to eq("Marg Lind") #make this more dynamic?
-    expect(contacts.first.name).to be_a String #maybe just this?
-    #or create a contact to start with and then just test for .last.  fix it later
+  it "can call for user's contacts and construct contacts objects" do
+    @tony = User.create!(name: "Tony Stark", email: "tonystark@gmail.com", token: "something", google_id: "somethingelse", phone_number: "303-333-1111")
+
+    params1 = { name: "John Morris", phone_number: "111-222-3333", user_id: @tony.id }
+    params2 = { name: "Bill Burke", phone_number: "444-555-6666", user_id: @tony.id }
+    ContactsFacade.create_contact(params1)
+    ContactsFacade.create_contact(params2)
+
+    contacts = ContactsFacade.get_contacts(@tony.id)
+
+    expect(contacts.count).to eq(2)
+    expect(contacts.first.user_id).to eq(@tony.id)
+    expect(contacts.first.name).to eq(params1[:name])
+    expect(contacts.first.phone_number).to eq(params1[:phone_number])
   end
 
-  it "can call for one contact by its id", :vcr do
-    contact_id = 2
-    contact = ContactsFacade.get_contact(contact_id)
-    # expect(contacts.count).to eq(5)
-    expect(contact.contact_id).to eq("2")
-    expect(contact.name).to eq("Charlsie Feest")
+  it "#get_contacts returns an empty array if the user has no contact" do
+    @tony = User.create!(name: "Tony Stark", email: "tonystark@gmail.com", token: "something", google_id: "somethingelse", phone_number: "303-333-1111")
+    contacts = ContactsFacade.get_contacts(@tony.id)
+
+    expect(contacts).to eq([])
   end
+
+  it "can call for one contact by its id" do
+    @tony = User.create!(name: "Tony Stark", email: "tonystark@gmail.com", token: "something", google_id: "somethingelse", phone_number: "303-333-1111")
+
+    params1 = { name: "John Morris", phone_number: "111-222-3333", user_id: @tony.id }
+    params2 = { name: "Bill Burke", phone_number: "444-555-6666", user_id: @tony.id }
+    contact1 = ContactsFacade.create_contact(params1)
+    contact2 = ContactsFacade.create_contact(params2)
+
+    contact = ContactsFacade.get_contact(contact1.contact_id)
+
+    expect(contact.user_id).to eq(@tony.id)
+    expect(contact.name).to eq(params1[:name])
+    expect(contact.phone_number).to eq(params1[:phone_number])
+  end
+
+  # it "#get_contact returns an empty array if there is no contact with the id" do
+  #   @tony = User.create!(name: "Tony Stark", email: "tonystark@gmail.com", token: "something", google_id: "somethingelse", phone_number: "303-333-1111")
+  #   params1 = { name: "John Morris", phone_number: "111-222-3333", user_id: @tony.id }
+  #   contact1 = ContactsFacade.create_contact(params1)
+  #
+  #   non_existent_contact_id = contact1.contact_id.to_i + 1
+  #
+  #   contact2 = ContactsFacade.get_contact(non_existent_contact_id)
+  #   expect(contact2).to eq([])
+  # end
 
   it "can create a contact for a user" do
-    user_id = 2
-    params = { name: "John Morris", phone_number: "303-249-3081", user_id: user_id }
+    @tony = User.create!(name: "Tony Stark", email: "tonystark@gmail.com", token: "something", google_id: "somethingelse", phone_number: "303-333-1111")
+    params1 = { name: "John Morris", phone_number: "111-222-3333", user_id: @tony.id }
+    contact1 = ContactsFacade.create_contact(params1)
+    contact = ContactsFacade.get_contact(contact1.contact_id)
 
-    ContactsFacade.create_contact(params)
-    contacts = ContactsFacade.get_contacts(user_id)
-
-    expect(contacts.last).to be_a Contact
-    expect(contacts.last.name).to eq("John Morris")
-    expect(contacts.last.phone_number).to eq("303-249-3081")
-    expect(contacts.last.user_id).to eq(2)
+    expect(contact.user_id).to eq(@tony.id)
+    expect(contact.name).to eq(params1[:name])
+    expect(contact.phone_number).to eq(params1[:phone_number])
   end
 
   it "can edit a contact" do
