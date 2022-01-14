@@ -22,19 +22,17 @@
 
     def get_timer(timer_id)
       response = conn.get("/api/v1/timers/#{timer_id}")
-
       parse_data(response)
     end
 
     def delete_timer(timer_id)
       response = conn.delete("/api/v1/timers/#{timer_id}")
-
       parse_data(response)
     end
 
     private
     def conn
-      Faraday.new("http://localhost:3000")
+      Faraday.new("https://komodo-backend.herokuapp.com")
     end
 
     def parse_data(response)
