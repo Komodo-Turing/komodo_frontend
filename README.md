@@ -1,4 +1,4 @@
-###do screenshots
+
 
 <img width="942" alt="Screen Shot 2022-01-13 at 5 07 48 PM" src="https://user-images.githubusercontent.com/86392608/149428892-9e313d17-529b-4208-96e1-cb2153a3a2c9.png">
 
@@ -59,6 +59,11 @@ This API consumes the following APIs:
 - [MapQuest Geocoding API](https://developer.mapquest.com/documentation/geocoding-api/) to provide map image
 
 # Screen Shots
+<img width="1235" alt="Screen Shot 2022-01-14 at 11 50 03 AM" src="https://user-images.githubusercontent.com/86392608/149569415-f547ea1c-efce-4c23-9003-a4a47cd06cfa.png">
+<img width="1237" alt="Screen Shot 2022-01-14 at 11 50 19 AM" src="https://user-images.githubusercontent.com/86392608/149569430-2810d3a8-9069-479c-b5f0-2849e8d0fb19.png">
+<img width="1236" alt="Screen Shot 2022-01-14 at 11 50 37 AM" src="https://user-images.githubusercontent.com/86392608/149569443-bee0989a-f555-4041-ae4d-9b3ecfb21fb6.png">
+<img width="1218" alt="Screen Shot 2022-01-14 at 11 51 10 AM" src="https://user-images.githubusercontent.com/86392608/149569466-dd11e03c-f680-4647-bf1e-908926748545.png">
+
 
 # Contributors
 - Jacob Yarborough |  [Github](https://github.com/jacobyarborough)   |   [LinkedIn](https://www.linkedin.com/in/jacob-yarborough/)
