@@ -13,7 +13,7 @@ RSpec.describe 'new timer' do
     click_link 'Create New Timer'
 
     fill_in :name, with: 'Timer'
-    fill_in :duration, with: 120
+    fill_in :duration, with: 1
     fill_in :substance, with: 'Drug'
     fill_in :dosage, with: '10oz'
     fill_in :entry_instructions, with: 'The building code is 1234'
@@ -26,7 +26,7 @@ RSpec.describe 'new timer' do
     click_link 'Timer'
 
     expect(page).to have_content('Timer')
-    expect(page).to have_content(120)
+    expect(page).to have_content(1)
     expect(page).to have_content('Drug')
     expect(page).to have_content('10oz')
     expect(page).to have_content('The building code is 1234')

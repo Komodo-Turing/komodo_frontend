@@ -6,7 +6,7 @@ RSpec.describe Timer do
     timer_params = {
         user_id: @haewon.id,
         name: 'Timer',
-        duration: 120,
+        duration: 1,
         substance: 'Drug',
         dosage: '10oz',
         entry_instructions: 'The building code is 1234',
@@ -18,7 +18,7 @@ RSpec.describe Timer do
     first_timer = data.first
 
     expect(first_timer.name).to eq('Timer')
-    expect(first_timer.duration).to eq(120)
+    expect(first_timer.duration).to eq(1)
     expect(first_timer.substance).to eq('Drug')
     expect(first_timer.dosage).to eq('10oz')
     expect(first_timer.entry_instructions).to eq('The building code is 1234')
