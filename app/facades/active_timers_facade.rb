@@ -5,5 +5,10 @@ class ActiveTimersFacade
 
       ActiveTimer.new(active_timer_data)
     end
+
+    def get_active_timer(active_timer_id)
+      active_timer_params = ActiveTimersService.get_active_timer(active_timer_id)
+      ActiveTimer.new(active_timer_params)
+    end
   end
 end

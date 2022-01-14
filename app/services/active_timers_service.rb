@@ -6,7 +6,13 @@ class ActiveTimersService
       end
       parse_data(response)
     end
-    
+
+    def get_active_timer(id)
+      response = conn.get("/api/v1/active_timers/#{id}")
+
+      parse_data(response)
+    end
+
     private
 
     def conn

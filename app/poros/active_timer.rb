@@ -1,6 +1,7 @@
 class ActiveTimer
-  attr_reader :user_id,
-              :name, 
+  attr_reader :id,
+              :user_id,
+              :name,
               :start_time,
               :duration,
               :substance,
@@ -10,6 +11,7 @@ class ActiveTimer
               :status
 
   def initialize(active_timer_data)
+    @id = active_timer_data[:id]
     @user_id = active_timer_data[:user]
     @name = active_timer_data[:name]
     @start_time = DateTime.now

@@ -5,6 +5,58 @@
 <h1>Entry Instructions: <%= @timer.entry_instructions %></h1><br>
 <h1>Notes: <%= @timer.notes %><br></h1><br>
 
-<%= button_to 'Start Timer', "/active_timers", params: {user_id: session[:user_id], name: @timer.name, start_time: DateTime.now, duration: @timer.duration, substance: @timer.substance, dosage: @timer.dosage, entry_instructions: @timer.entry_instructions, notes: @timer.notes, status: 'Active'}, method: :post %><br>
+
+<%= button_to 'Start Timer', "/active_timers", params: {user_id: session[:user_id], name: @timer.name, start_time: DateTime.now, duration: @timer.duration, substance: @timer.substance, dosage: @timer.dosage, entry_instructions: @timer.entry_instructions, notes: @timer.notes, status: 'Active'}, method: :post, id: 'start' %><br>
+
+<script>
+
+document.getElementById('start').addEventListener("click", myFunction);
+
+    function myFunction() {
+
+        const second = 1000,
+              minute = second * 60,
+              hour = minute * 60,
+              day = hour * 24;
+
+
+        console.log('<%= @timer.duration %>')
+        const countDown = new Date().getTime() + ('<%= @timer.duration %>' * 60000),
+            x = setInterval(function() {
+
+              const now = new Date().getTime(),
+                    distance = countDown - now;
+
+                document.getElementById("days").innerText = Math.floor(distance / (day)),
+                document.getElementById("hours").innerText = Math.floor((distance % (day)) / (hour)),
+                document.getElementById("minutes").innerText = Math.floor((distance % (hour)) / (minute)),
+                document.getElementById("seconds").innerText = Math.floor((distance % (minute)) / second);
+
+
+              if (distance < 0) {
+                document.getElementById("headline").innerText = "Timer has expired, contacts will be sent your location.";
+                document.getElementById("countdown").style.display = "none";
+                document.getElementById("content").style.display = "block";
+                clearInterval(x);
+              }
+
+            }, 0)
+
+    }
+</script>
+
 <%= button_to 'Edit Timer', "/timers/#{@timer.id}/edit", method: :get %><br>
 <%= button_to 'Delete Timer', "/timers/#{@timer.id}/delete", method: :delete %><br>
+
+<div class="container">
+  <h1 id="headline">Countdown Timer</h1>
+  <div id="countdown">
+    <ul>
+      <li><span id="days"></span>days</li>
+      <li><span id="hours"></span>Hours</li>
+      <li><span id="minutes"></span>Minutes</li>
+      <li><span id="seconds"></span>Seconds</li>
+    </ul>
+  </div>
+
+</div>
