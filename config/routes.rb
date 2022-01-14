@@ -8,7 +8,6 @@ Rails.application.routes.draw do
   get '/dashboard', to: "dashboard#index"
 
   get '/contacts/new', to: "contacts#new"
-  # post '/contacts', to: "contacts#create"
   post '/dashboard', to: "contacts#create"
 
   get "/contacts/:id/edit", to: "contacts#edit"
@@ -25,12 +24,13 @@ Rails.application.routes.draw do
 
   get '/timers/:id', to: 'timers#show'
   get '/timers/:id/edit', to: 'timers#edit'
-  #patch '/timers/:id/edit', to: 'timers#update'
+
   patch '/timers/:id', to: 'timers#update'
 
   delete '/timers/:id/delete', to: 'timers#destroy'
 
-  post '/active_timers', to: 'active_timers#create'
+
   get '/active_timers/:id', to: 'active_timers#show'
   patch '/active_timers/:id', to: 'active_timers#update'
+  post '/active_timers', to: 'active_timers#create'
 end

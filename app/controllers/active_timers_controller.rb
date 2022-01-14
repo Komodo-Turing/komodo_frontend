@@ -6,7 +6,6 @@ class ActiveTimersController < ApplicationController
 
   def show
     @timer = ActiveTimersFacade.get_active_timer(params[:id])
-    # require "pry"; binding.pry
   end
 
   def update

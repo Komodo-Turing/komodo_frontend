@@ -1,7 +1,6 @@
 
 <script>
   window.addEventListener('load', myFunction)
-// document.getElementById('start').addEventListener("click", myFunction);
     function myFunction() {
         const second = 1000,
               minute = second * 60,
@@ -36,4 +35,5 @@
     </ul>
   </div>
 </div>
+
 <%= button_to 'Stop Timer', "/active_timers/#{@timer.id}", params: { update_status: 'Stopped' }, method: :patch %>
