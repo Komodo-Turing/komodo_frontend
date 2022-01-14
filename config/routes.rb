@@ -6,6 +6,7 @@ Rails.application.routes.draw do
   get '/o/oauth2/auth', to: "sessions#create"
 
   get '/dashboard', to: "dashboard#index"
+  get '/dashboard/information', to: "dashboard#information"
 
   get '/contacts/new', to: "contacts#new"
   post '/dashboard', to: "contacts#create"

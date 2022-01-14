@@ -6,5 +6,7 @@ class DashboardController < ApplicationController
     @contacts = ContactsFacade.get_contacts(user_id)
     @timers = TimersFacade.get_timers(user_id)
   end
-  
+
+  def information
+  end
 end
