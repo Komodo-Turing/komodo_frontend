@@ -1,4 +1,4 @@
-###update test coverage and do screenshots
+###do screenshots
 
 <img width="942" alt="Screen Shot 2022-01-13 at 5 07 48 PM" src="https://user-images.githubusercontent.com/86392608/149428892-9e313d17-529b-4208-96e1-cb2153a3a2c9.png">
 
@@ -58,12 +58,6 @@ One of the most effective ways of preventing substance overuse is to make sure s
 This API consumes the following APIs:
 - [Twilio](https://www.twilio.com/docs/sms/api) to send text messages
 - [MapQuest Geocoding API](https://developer.mapquest.com/documentation/geocoding-api/) to provide map image
-
-# Test Suite
-- Run with `bundle exec rspec`
-- All tests should be passing
-- XX% test coverage for the FrontEnd
-- XX% test coverage for the BackEnd
 
 # Screen Shots
 
