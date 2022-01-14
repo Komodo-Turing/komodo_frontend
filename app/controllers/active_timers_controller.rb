@@ -3,8 +3,10 @@ class ActiveTimersController < ApplicationController
     ActiveTimersFacade.create_active_timer(active_timer_params)
   end
 
-  def show
-
+  def update
+    if params[:update_status]
+      ActiveTimersFacade.update_active_timer(params[:id], {status: 'Stopped'})
+    end
   end
 
   private
